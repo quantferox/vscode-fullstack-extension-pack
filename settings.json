@@ -1,0 +1,2171 @@
+{
+	/*WINDOW========================*/
+	"window.systemColorTheme": "auto",
+	"window.density.editorTabHeight": "default",
+	"window.commandCenter": false,
+	"window.openFoldersInNewWindow": "on",
+	"window.openWithoutArgumentsInNewWindow": "off",
+	"window.autoDetectHighContrast": false,
+	/*WINDOW========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"workbench.activityBar.compact": true,
+	"workbench.activityBar.location": "top",
+	"workbench.browser.dataStorage": "workspace",
+	"workbench.browser.enableChatTools": false,
+
+
+
+
+	// Controls whether to automatically resume available working changes stored in the cloud for the current workspace.
+	//  - onReload: Automatically resume available working changes from the cloud on window reload.
+	//  - off: Never attempt to resume working changes from the cloud.
+	"workbench.cloudChanges.autoResume": "onReload",
+
+	// Controls whether to prompt the user to store working changes in the cloud when using Continue Working On.
+	//  - prompt: Prompt the user to sign in to store working changes in the cloud with Continue Working On.
+	//  - off: Do not store working changes in the cloud with Continue Working On unless the user has already turned on Cloud Changes.
+	"workbench.cloudChanges.continueOn": "prompt",
+
+	// Controls where the command palette should ask chat questions.
+	//  - chatView: Ask chat questions in the Chat view.
+	//  - quickChat: Ask chat questions in Quick Chat.
+	"workbench.commandPalette.experimental.askChatLocation": "chatView",
+
+	// Controls whether the command palette should include similar commands. You must have an extension installed that provides Natural Language support.
+	"workbench.commandPalette.experimental.enableNaturalLanguageSearch": true,
+
+	// Controls whether the command palette should have a list of commonly used commands.
+	"workbench.commandPalette.experimental.suggestCommands": false,
+
+	// Controls the number of recently used commands to keep in history for the command palette. Set to 0 to disable command history.
+	"workbench.commandPalette.history": 50,
+
+	// Controls whether the last typed input to the command palette should be restored when opening it the next time.
+	"workbench.commandPalette.preserveInput": false,
+
+	// Controls whether the command palette shows 'Ask in Chat' option at the bottom.
+	"workbench.commandPalette.showAskInChat": true,
+
+	// ======================================
+	// Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors for diff views (for example `"*.md": "vscode.markdown.preview.editor"`). These override `workbench.editorAssociations` for diffs.
+	"workbench.diffEditorAssociations": {},
+
+	// Controls whether to always show the editor actions, even when the editor group is not active.
+	"workbench.editor.alwaysShowEditorActions": false,
+
+	// If an editor matching one of the listed types is opened as the first in an editor group and more than one group is open, the group is automatically locked. Locked groups will only be used for opening editors when explicitly chosen by a user gesture (for example drag and drop), but not by default. Consequently, the active editor in a locked group is less likely to be replaced accidentally with a different editor.
+	"workbench.editor.autoLockGroups": {
+		"default": false,
+		"workbench.editor.chatSession": false,
+		"workbench.editor.chatDebug": false,
+		"workbench.editorinputs.searchEditorInput": false,
+		"workbench.editor.processExplorer": true,
+		"agentSessionsWelcomePage": false,
+		"workbench.editor.browser": false,
+		"notebookOutputEditor": false,
+		"jupyter-notebook": false,
+		"repl": false,
+		"workbench.editors.gettingStartedInput": false,
+		"terminalEditor": true,
+		"imagePreview.previewEditor": false,
+		"vscode.audioPreview": false,
+		"vscode.videoPreview": false,
+		"jsProfileVisualizer.cpuprofile.table": false,
+		"jsProfileVisualizer.heapprofile.table": false,
+		"jsProfileVisualizer.heapsnapshot.table": false,
+		"phpprofiler.cachegrind": false,
+		"gitlens.rebase": false,
+		"decompiled.javaClass": false,
+		"java.formatterSettingsEditor": false,
+		"workbench.input.interactive": false,
+		"mainThreadWebview-markdown.preview": false,
+		"mainThreadWebview-simpleBrowser.view": true,
+		"mainThreadWebview-browserPreview": true
+	},
+
+	// Controls if the centered layout should automatically resize to maximum width when more than one group is open. Once only one group is open it will resize back to the original centered width.
+	"workbench.editor.centeredLayoutAutoResize": true,
+
+	// Controls whether the centered layout tries to maintain constant width when the window is resized.
+	"workbench.editor.centeredLayoutFixedWidth": false,
+
+	// Controls the behavior of empty editor groups when the last tab in the group is closed. When enabled, empty groups will automatically close. When disabled, empty groups will remain part of the grid.
+	"workbench.editor.closeEmptyGroups": true,
+
+	// Controls whether editors showing a file that was opened during the session should close automatically when getting deleted or renamed by some other process. Disabling this will keep the editor open  on such an event. Note that deleting from within the application will always close the editor and that editors with unsaved changes will never close to preserve your data.
+	"workbench.editor.closeOnFileDelete": false,
+
+	// Controls whether the custom workbench editor labels should be applied.
+	"workbench.editor.customLabels.enabled": true,
+
+	// Controls the rendering of the editor label. Each __Item__ is a pattern that matches a file path. Both relative and absolute file paths are supported. The relative path must include the WORKSPACE_FOLDER (e.g `WORKSPACE_FOLDER/src/**.tsx` or `*/src/**.tsx`). Absolute patterns must start with a `/`. In case multiple patterns match, the longest matching path will be picked. Each __Value__ is the template for the rendered editor when the __Item__ matches. Variables are substituted based on the context:
+	// - `${dirname}`: name of the folder in which the file is located (e.g. `WORKSPACE_FOLDER/folder/file.txt -> folder`).
+	// - `${dirname(N)}`: name of the nth parent folder in which the file is located (e.g. `N=2: WORKSPACE_FOLDER/static/folder/file.txt -> WORKSPACE_FOLDER`). Folders can be picked from the start of the path by using negative numbers (e.g. `N=-1: WORKSPACE_FOLDER/folder/file.txt -> WORKSPACE_FOLDER`). If the __Item__ is an absolute pattern path, the first folder (`N=-1`) refers to the first folder in the absolute path, otherwise it corresponds to the workspace folder.
+	// - `${filename}`: name of the file without the file extension (e.g. `WORKSPACE_FOLDER/folder/file.txt -> file`).
+	// - `${extname}`: the file extension (e.g. `WORKSPACE_FOLDER/folder/file.txt -> txt`).
+	// - `${extname(N)}`: the nth extension of the file separated by '.' (e.g. `N=2: WORKSPACE_FOLDER/folder/file.ext1.ext2.ext3 -> ext1`). Extension can be picked from the start of the extension by using negative numbers (e.g. `N=-1: WORKSPACE_FOLDER/folder/file.ext1.ext2.ext3 -> ext2`).
+	// 
+	// Example: `"**/static/**/*.html": "${filename} - ${dirname} (${extname})"` will render a file `WORKSPACE_FOLDER/static/folder/file.html` as `file - folder (html)`.
+	"workbench.editor.customLabels.patterns": {},
+
+	// Controls whether editor file decorations should use badges.
+	"workbench.editor.decorations.badges": true,
+
+	// Controls whether editor file decorations should use colors.
+	"workbench.editor.decorations.colors": true,
+
+	// The default editor for files detected as binary. If undefined, the user will be presented with a picker.
+	"workbench.editor.defaultBinaryEditor": "",
+
+	// Controls how the editor group is resized when double clicking on a tab. This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	//  - maximize: All other editor groups are hidden and the current editor group is maximized to take up the entire editor area.
+	//  - expand: The editor group takes as much space as possible by making all other editor groups as small as possible.
+	//  - off: No editor group is resized when double clicking on a tab.
+	"workbench.editor.doubleClickTabToToggleEditorGroupSizes": "expand",
+
+	// Controls if editors can be dragged out of the window to open them in a new window. Press and hold the `Alt` key while dragging to toggle this dynamically.
+	"workbench.editor.dragToOpenWindow": true,
+
+	// Controls where the editor actions are shown.
+	//  - default: Show editor actions in the window title bar when `workbench.editor.showTabs` is set to `none`. Otherwise, editor actions are shown in the editor tab bar.
+	//  - titleBar: Show editor actions in the window title bar. If `window.customTitleBarVisibility` is set to `never`, editor actions are hidden.
+	//  - hidden: Editor actions are not shown.
+	"workbench.editor.editorActionsLocation": "default",
+
+	// Controls if the empty editor text hint should be visible in the editor.
+	"workbench.editor.empty.hint": "text",
+
+	// Controls whether preview mode is used when editors open. There is a maximum of one preview mode editor per editor group. This editor displays its filename in italics on its tab or title label and in the Open Editors view. Its contents will be replaced by the next editor opened in preview mode. Making a change in a preview mode editor will persist it, as will a double-click on its label, or the 'Keep Open' option in its label context menu. Opening a file from Explorer with a double-click persists its editor immediately.
+	"workbench.editor.enablePreview": true,
+
+	// Controls whether editors remain in preview when a code navigation is started from them. Preview editors do not stay open, and are reused until explicitly set to be kept open (via double-click or editing). This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	"workbench.editor.enablePreviewFromCodeNavigation": false,
+
+	// Controls whether editors opened from Quick Open show as preview editors. Preview editors do not stay open, and are reused until explicitly set to be kept open (via double-click or editing). When enabled, hold Ctrl before selection to open an editor as a non-preview. This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+
+	// Controls whether editors are closed in most recently used order or from left to right.
+	"workbench.editor.focusRecentEditorAfterClose": true,
+
+	// Controls whether a top border is drawn on tabs for editors that have unsaved changes. This value is ignored when `workbench.editor.showTabs` is not set to multiple.
+	"workbench.editor.highlightModifiedTabs": false,
+
+	// Enables use of editor history in language detection. This causes automatic language detection to favor languages that have been recently opened and allows for automatic language detection to operate with smaller inputs.
+	"workbench.editor.historyBasedLanguageDetection": true,
+
+	// Controls the format of the label for an editor.
+	//  - default: Show the name of the file. When tabs are enabled and two files have the same name in one group the distinguishing sections of each file's path are added. When tabs are disabled, the path relative to the workspace folder is shown if the editor is active.
+	//  - short: Show the name of the file followed by its directory name.
+	//  - medium: Show the name of the file followed by its path relative to the workspace folder.
+	//  - long: Show the name of the file followed by its absolute path.
+	"workbench.editor.labelFormat": "default",
+
+	// Controls whether the language in a text editor is automatically detected unless the language has been explicitly set by the language picker. This can also be scoped by language so you can specify which languages you do not want to be switched off of. This is useful for languages like Markdown that often contain other languages that might trick language detection into thinking it's the embedded language and not Markdown.
+	"workbench.editor.languageDetection": true,
+
+	// When enabled, shows a status bar Quick Fix when the editor language doesn't match detected content language.
+	"workbench.editor.languageDetectionHints": {
+		"untitledEditors": true,
+		"notebookEditors": true
+	},
+
+	// Controls if the number of opened editors should be limited or not. When enabled, less recently used editors will close to make space for newly opening editors.
+	"workbench.editor.limit.enabled": false,
+
+	// Controls if the maximum number of opened editors should exclude dirty editors for counting towards the configured limit.
+	"workbench.editor.limit.excludeDirty": false,
+
+	// Controls if the limit of maximum opened editors should apply per editor group or across all editor groups.
+	"workbench.editor.limit.perEditorGroup": false,
+
+	// Controls the maximum number of opened editors. Use the `workbench.editor.limit.perEditorGroup` setting to control this limit per editor group or across all groups.
+	"workbench.editor.limit.value": 10,
+
+	// Enables the use of mouse buttons four and five for commands 'Go Back' and 'Go Forward'.
+	"workbench.editor.mouseBackForwardToNavigate": true,
+
+	// Controls the scope of history navigation in editors for commands such as 'Go Back' and 'Go Forward'.
+	//  - default: Navigate across all opened editors and editor groups.
+	//  - editorGroup: Navigate only in editors of the active editor group.
+	//  - editor: Navigate only in the active editor.
+	"workbench.editor.navigationScope": "default",
+
+	// Controls where editors open. Select `left` or `right` to open editors to the left or right of the currently active one. Select `first` or `last` to open editors independently from the currently active one.
+	"workbench.editor.openPositioning": "right",
+
+	// Controls the default direction of editors that are opened side by side (for example, from the Explorer). By default, editors will open on the right hand side of the currently active one. If changed to `down`, the editors will open below the currently active one. This also impacts the split editor action in the editor toolbar.
+	"workbench.editor.openSideBySideDirection": "right",
+
+	// Controls the size of pinned editor tabs. Pinned tabs are sorted to the beginning of all opened tabs and typically do not close until unpinned. This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	//  - normal: A pinned tab inherits the look of non pinned tabs.
+	//  - compact: A pinned tab will show in a compact form with only icon or first letter of the editor name.
+	//  - shrink: A pinned tab shrinks to a compact fixed size showing parts of the editor name.
+	"workbench.editor.pinnedTabSizing": "normal",
+
+	// When enabled, displays pinned tabs in a separate row above all other tabs. This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	"workbench.editor.pinnedTabsOnSeparateRow": false,
+
+	// When enabled, a language detection model that takes into account editor history will be given higher precedence.
+	"workbench.editor.preferHistoryBasedLanguageDetection": false,
+
+	// Controls whether pinned editors should close when keyboard or middle mouse click is used for closing.
+	//  - keyboardAndMouse: Always prevent closing the pinned editor when using mouse middle click or keyboard.
+	//  - keyboard: Prevent closing the pinned editor when using the keyboard.
+	//  - mouse: Prevent closing the pinned editor when using mouse middle click.
+	//  - never: Never prevent closing a pinned editor.
+	"workbench.editor.preventPinnedEditorClose": "keyboardAndMouse",
+
+	// Controls whether editors are restored on startup. When disabled, only dirty editors will be restored from the previous session.
+	"workbench.editor.restoreEditors": true,
+
+	// Restores the last editor view state (such as scroll position) when re-opening editors after they have been closed. Editor view state is stored per editor group and discarded when a group closes. Use the `workbench.editor.sharedViewState` setting to use the last known view state across all editor groups in case no previous view state was found for a editor group.
+	"workbench.editor.restoreViewState": true,
+
+	// Controls whether an editor is revealed in any of the visible groups if opened. If disabled, an editor will prefer to open in the currently active editor group. If enabled, an already opened editor will be revealed instead of opened again in the currently active editor group. Note that there are some cases where this setting is ignored, such as when forcing an editor to open in a specific group or to the side of the currently active group.
+	"workbench.editor.revealIfOpen": false,
+
+	// Controls whether scrolling over tabs will open them or not. By default tabs will only reveal upon scrolling, but not open. You can press and hold the Shift-key while scrolling to change this behavior for that duration. This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	"workbench.editor.scrollToSwitchTabs": false,
+
+	// Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.
+	"workbench.editor.sharedViewState": false,
+
+	// Controls whether opened editors should show with an icon or not. This requires a file icon theme to be enabled as well.
+	"workbench.editor.showIcons": true,
+
+	// When enabled, will show the tab index. This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	"workbench.editor.showTabIndex": false,
+
+	// Controls whether opened editors should show as individual tabs, one single large tab or if the title area should not be shown.
+	//  - multiple: Each editor is displayed as a tab in the editor title area.
+	//  - single: The active editor is displayed as a single large tab in the editor title area.
+	//  - none: The editor title area is not displayed.
+	"workbench.editor.showTabs": "multiple",
+
+	// Controls the layout for when an editor is split in an editor group to be either vertical or horizontal.
+	//  - vertical: Editors are positioned from top to bottom.
+	//  - horizontal: Editors are positioned from left to right.
+	"workbench.editor.splitInGroupLayout": "horizontal",
+
+	// Controls if editor groups can be split from drag and drop operations by dropping an editor or file on the edges of the editor area.
+	"workbench.editor.splitOnDragAndDrop": true,
+
+	// Controls the size of editor groups when splitting them.
+	//  - auto: Splits the active editor group to equal parts, unless all editor groups are already in equal parts. In that case, splits all the editor groups to equal parts.
+	//  - distribute: Splits all the editor groups to equal parts.
+	//  - split: Splits the active editor group to equal parts.
+	"workbench.editor.splitSizing": "auto",
+
+	// Controls the visibility of the tab close action button.
+	"workbench.editor.tabActionCloseVisibility": true,
+
+	// Controls the position of the editor's tabs action buttons (close, unpin). This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	"workbench.editor.tabActionLocation": "right",
+
+	// Controls the visibility of the tab unpin action button.
+	"workbench.editor.tabActionUnpinVisibility": true,
+
+	// Controls the size of editor tabs. This value is ignored when `workbench.editor.showTabs` is not set to `multiple`.
+	//  - fit: Always keep tabs large enough to show the full editor label.
+	//  - shrink: Allow tabs to get smaller when the available space is not enough to show all tabs at once.
+	//  - fixed: Make all tabs the same size, while allowing them to get smaller when the available space is not enough to show all tabs at once.
+	"workbench.editor.tabSizing": "fit",
+
+	// Controls the maximum width of tabs when `workbench.editor.tabSizing` size is set to `fixed`.
+	"workbench.editor.tabSizingFixedMaxWidth": 160,
+
+	// Controls the minimum width of tabs when `workbench.editor.tabSizing` size is set to `fixed`.
+	"workbench.editor.tabSizingFixedMinWidth": 50,
+
+	// Controls the height of the scrollbars used for tabs and breadcrumbs in the editor title area.
+	//  - default: The default size.
+	//  - large: Increases the size, so it can be grabbed more easily with the mouse.
+	"workbench.editor.titleScrollbarSizing": "default",
+
+	// Controls the visibility of the scrollbars used for tabs and breadcrumbs in the editor title area.
+	//  - auto: The horizontal scrollbar will be visible only when necessary.
+	//  - visible: The horizontal scrollbar will always be visible.
+	//  - hidden: The horizontal scrollbar will always be hidden.
+	"workbench.editor.titleScrollbarVisibility": "auto",
+
+	// Controls the format of the label for an untitled editor.
+	//  - content: The name of the untitled file is derived from the contents of its first line unless it has an associated file path. It will fallback to the name in case the line is empty or contains no word characters.
+	//  - name: The name of the untitled file is not derived from the contents of the file.
+	"workbench.editor.untitled.labelFormat": "content",
+
+	// Controls whether editors open in a modal overlay.
+	//  - off: Editors never open in a modal overlay.
+	//  - some: Certain editors such as Settings and Keyboard Shortcuts may open in a centered modal overlay.
+	//  - all: All editors open in a centered modal overlay.
+	"workbench.editor.useModal": "some",
+
+	// Controls whether tabs should be wrapped over multiple lines when exceeding available space or whether a scrollbar should appear instead. This value is ignored when `workbench.editor.showTabs` is not set to '`multiple`'.
+	"workbench.editor.wrapTabs": false,
+
+	// Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors (for example `"*.hex": "hexEditor.hexedit"`). These have precedence over the default behavior.
+	"workbench.editorAssociations": {},
+
+	// Controls the minimum size of a file in MB before asking for confirmation when opening in the editor. Note that this setting may not apply to all editor types and environments.
+	"workbench.editorLargeFileConfirmation": 1024,
+
+	// Fetches experiments to run from a Microsoft online service.
+	"workbench.enableExperiments": true,
+
+	// Controls whether to automatically store available working changes in the cloud for the current workspace. This setting has no effect in the web.
+	//  - onShutdown: Automatically store current working changes in the cloud on window close.
+	//  - off: Never attempt to automatically store working changes in the cloud.
+	"workbench.experimental.cloudChanges.autoStore": "off",
+
+	// Controls whether to surface cloud changes which partially match the current session.
+	"workbench.experimental.cloudChanges.partialMatches.enabled": false,
+
+	// Controls whether to render the Share action next to the command center when `window.commandCenter` is `true`.
+	"workbench.experimental.share.enabled": false,
+
+	// Configure the browser to use for opening http or https links externally. This can either be the name of the browser (`edge`, `chrome`, `firefox`) or an absolute path to the browser's executable. Will use the system default if not set.
+	"workbench.externalBrowser": "",
+
+	// Configure the opener to use for external URIs (http, https).
+	"workbench.externalUriOpeners": {},
+
+	// Controls the delay in milliseconds after which the hover is shown for workbench items (ex. some extension provided tree view items). Already visible items may require a refresh before reflecting this setting change.
+	"workbench.hover.delay": 500,
+
+	// Controls the reduced delay in milliseconds used for showing hovers in specific contexts where faster feedback is beneficial.
+	"workbench.hover.reducedDelay": 500,
+
+	// Controls whether the layout control is shown in the custom title bar. This setting only has an effect when `window.customTitleBarVisibility` is not set to `never`.
+	"workbench.layoutControl.enabled": true,
+
+	// Controls whether the layout control in the custom title bar is displayed as a single menu button or with multiple UI toggles.
+	//  - menu: Shows a single button with a dropdown of layout options.
+	//  - toggles: Shows several buttons for toggling the visibility of the panels and side bar.
+	//  - both: Shows both the dropdown and toggle buttons.
+	"workbench.layoutControl.type": "both",
+
+	// Controls the type of matching used when searching lists and trees in the workbench.
+	//  - fuzzy: Use fuzzy matching when searching.
+	//  - contiguous: Use contiguous matching when searching.
+	"workbench.list.defaultFindMatchType": "fuzzy",
+
+	// Controls the default find mode for lists and trees in the workbench.
+	//  - highlight: Highlight elements when searching. Further up and down navigation will traverse only the highlighted elements.
+	//  - filter: Filter elements when searching.
+	"workbench.list.defaultFindMode": "highlight",
+
+	// Scrolling speed multiplier when pressing `Alt`.
+	"workbench.list.fastScrollSensitivity": 5,
+
+	// Controls whether lists and trees support horizontal scrolling in the workbench. Warning: turning on this setting has a performance implication.
+	"workbench.list.horizontalScrolling": false,
+
+	// Please use 'workbench.list.defaultFindMode' and	'workbench.list.typeNavigationMode' instead.
+	// Controls the keyboard navigation style for lists and trees in the workbench. Can be simple, highlight and filter.
+	//  - simple: Simple keyboard navigation focuses elements which match the keyboard input. Matching is done only on prefixes.
+	//  - highlight: Highlight keyboard navigation highlights elements which match the keyboard input. Further up and down navigation will traverse only the highlighted elements.
+	//  - filter: Filter keyboard navigation will filter out and hide all the elements which do not match the keyboard input.
+	"workbench.list.keyboardNavigation": "highlight",
+
+	// A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events.
+	"workbench.list.mouseWheelScrollSensitivity": 1,
+
+	// The modifier to be used to add an item in trees and lists to a multi-selection with the mouse (for example in the explorer, open editors and scm view). The 'Open to Side' mouse gestures - if supported - will adapt such that they do not conflict with the multiselect modifier.
+	//  - ctrlCmd: Maps to `Control` on Windows and Linux and to `Command` on macOS.
+	//  - alt: Maps to `Alt` on Windows and Linux and to `Option` on macOS.
+	"workbench.list.multiSelectModifier": "ctrlCmd",
+
+	// Controls how to open items in trees and lists using the mouse (if supported). Note that some trees and lists might choose to ignore this setting if it is not applicable.
+	"workbench.list.openMode": "singleClick",
+
+	// Controls whether clicks in the scrollbar scroll page by page.
+	"workbench.list.scrollByPage": false,
+
+	// Controls whether lists and trees have smooth scrolling.
+	"workbench.list.smoothScrolling": false,
+
+	// Controls how type navigation works in lists and trees in the workbench. When set to `trigger`, type navigation begins once the `list.triggerTypeNavigation` command is run.
+	"workbench.list.typeNavigationMode": "automatic",
+
+	// Controls whether local file history is enabled. When enabled, the file contents of an editor that is saved will be stored to a backup location to be able to restore or review the contents later. Changing this setting has no effect on existing local file history entries.
+	"workbench.localHistory.enabled": true,
+
+	// Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files from the local file history. Glob patterns are always evaluated relative to the path of the workspace folder unless they are absolute paths. Changing this setting has no effect on existing local file history entries.
+	"workbench.localHistory.exclude": {},
+
+	// Controls the maximum number of local file history entries per file. When the number of local file history entries exceeds this number for a file, the oldest entries will be discarded.
+	"workbench.localHistory.maxFileEntries": 50,
+
+	// Controls the maximum size of a file (in KB) to be considered for local file history. Files that are larger will not be added to the local file history. Changing this setting has no effect on existing local file history entries.
+	"workbench.localHistory.maxFileSize": 256,
+
+	// Configure an interval in seconds during which the last entry in local file history is replaced with the entry that is being added. This helps reduce the overall number of entries that are added, for example when auto save is enabled. This setting is only applied to entries that have the same source of origin. Changing this setting has no effect on existing local file history entries.
+	"workbench.localHistory.mergeWindow": 10,
+
+	// Controls whether the navigation control is shown in the custom title bar. This setting only has an effect when `window.customTitleBarVisibility` is not set to `never`.
+	"workbench.navigationControl.enabled": true,
+
+	// Controls the position of the notification toasts and notification center.
+	//  - bottom-right: Show notifications in the bottom right corner.
+	//  - bottom-left: Show notifications in the bottom left corner.
+	//  - top-right: Show notifications in the top right corner, similar to OS-level notifications.
+	"workbench.notifications.position": "bottom-right",
+
+	// Controls the visibility of the Notifications button in the title bar. Only applies when notifications are positioned at the top right.
+	"workbench.notifications.showInTitleBar": true,
+
+	// Controls the default location of the panel (Terminal, Debug Console, Output, Problems) in a new workspace. It can either show at the bottom, top, right, or left of the editor area.
+	"workbench.panel.defaultLocation": "bottom",
+
+	// Controls whether the panel opens maximized. It can either always open maximized, never open maximized, or open to the last state it was in before being closed.
+	//  - always: Always maximize the panel when opening it.
+	//  - never: Never maximize the panel when opening it.
+	//  - preserve: Open the panel to the state that it was in, before it was closed.
+	"workbench.panel.opensMaximized": "preserve",
+
+	// Controls whether activity items in the panel title are shown as label or icon.
+	"workbench.panel.showLabels": true,
+
+	// Controls whether Quick Open should close automatically once it loses focus.
+	"workbench.quickOpen.closeOnFocusLost": true,
+
+	// Controls whether the last typed input to Quick Open should be restored when opening it the next time.
+	"workbench.quickOpen.preserveInput": false,
+
+	// Controls whether the workbench should render with fewer animations.
+	//  - on: Always render with reduced motion.
+	//  - off: Do not render with reduced motion
+	//  - auto: Render with reduced motion based on OS configuration.
+	"workbench.reduceMotion": "auto",
+
+	// Controls whether the workbench should render with fewer transparency and blur effects for improved performance.
+	//  - on: Always render without transparency and blur effects.
+	//  - off: Do not reduce transparency and blur effects.
+	//  - auto: Reduce transparency and blur effects based on OS configuration.
+	"workbench.reduceTransparency": "off",
+
+	// When enabled, remote extensions recommendations will be shown in the Remote Indicator menu.
+	"workbench.remoteIndicator.showExtensionRecommendations": true,
+
+	// Controls the hover feedback delay in milliseconds of the dragging area in between views/editors.
+	"workbench.sash.hoverDelay": 300,
+
+	// Controls the feedback area size in pixels of the dragging area in between views/editors. Set it to a larger value if you feel it's hard to resize views using the mouse.
+	"workbench.sash.size": 4,
+
+	// Controls the default visibility of the secondary side bar in workspaces or empty windows that are opened for the first time. Can be overridden by the agent sessions startup editor setting.
+	//  - hidden: The secondary side bar is hidden by default.
+	//  - visibleInWorkspace: The secondary side bar is visible by default if a workspace is opened.
+	//  - visible: The secondary side bar is visible by default.
+	//  - maximizedInWorkspace: The secondary side bar is visible and maximized by default if a workspace is opened.
+	//  - maximized: The secondary side bar is visible and maximized by default.
+	"workbench.secondarySideBar.defaultVisibility": "visibleInWorkspace",
+
+	// Controls whether the secondary side bar is enforced to always show maximized on startup and when there are no open editors, in layouts that support a maximized secondary side bar.
+	"workbench.secondarySideBar.forceMaximized": false,
+
+	// Controls whether activity items in the secondary side bar title are shown as label or icon. This setting only has an effect when `workbench.activityBar.location` is not set to `top`.
+	"workbench.secondarySideBar.showLabels": true,
+
+	// Controls whether advanced settings are always shown in the settings editor without requiring the `@tag:advanced` filter.
+	"workbench.settings.alwaysShowAdvancedSettings": false,
+
+	// Configure settings to be applied for all profiles.
+	"workbench.settings.applyToAllProfiles": [],
+
+	// Determines which Settings editor to use by default.
+	//  - ui: Use the settings UI editor.
+	//  - json: Use the JSON file editor.
+	"workbench.settings.editor": "ui",
+
+	// Controls whether to enable the natural language search mode for settings. The natural language search is provided by a Microsoft online service.
+	"workbench.settings.enableNaturalLanguageSearch": true,
+
+	// Controls whether opening keybinding settings also opens an editor showing all default keybindings.
+	"workbench.settings.openDefaultKeybindings": false,
+
+	// Controls whether opening settings also opens an editor showing all default settings.
+	"workbench.settings.openDefaultSettings": false,
+
+	// Controls the behavior of the Settings editor Table of Contents while searching. If this setting is being changed in the Settings editor, the setting will take effect after the search query is modified.
+	//  - hide: Hide the Table of Contents while searching.
+	//  - filter: Filter the Table of Contents to just categories that have matching settings. Clicking on a category will filter the results to that category.
+	"workbench.settings.settingsSearchTocBehavior": "filter",
+
+	// Controls whether the AI search results toggle is shown in the search bar in the Settings editor after doing a search and once AI search results are available.
+	"workbench.settings.showAISearchToggle": true,
+
+	// Controls whether to use the split JSON editor when editing settings as JSON.
+	"workbench.settings.useSplitJSON": false,
+
+	// Controls whether shadow effects are shown around the side panels and other workbench elements.
+	"workbench.shadows": true,
+
+	// Controls the location of the primary side bar and activity bar. They can either show on the left or right of the workbench. The secondary side bar will show on the opposite side of the workbench.
+	"workbench.sideBar.location": "left",
+
+	// Controls which editor is shown at startup, if none are restored from the previous session.
+	//  - none: Start without an editor.
+	//  - welcomePage: Open the Welcome page, with content to aid in getting started with VS Code and extensions.
+	//  - readme: Open the README when opening a folder that contains one, fallback to 'welcomePage' otherwise. Note: This is only observed as a global configuration, it will be ignored if set in a workspace or folder configuration.
+	//  - newUntitledFile: Open a new untitled text file (only applies when opening an empty window).
+	//  - welcomePageInEmptyWorkbench: Open the Welcome page when opening an empty workbench.
+	//  - terminal: Open a new terminal in the editor area.
+	//  - agentSessionsWelcomePage: Open the Agent Sessions Welcome page. Will override the workbench secondary side bar visibility settings.
+	"workbench.startupEditor": "welcomePage",
+
+	// Controls the visibility of the status bar at the bottom of the workbench.
+	"workbench.statusBar.visible": true,
+
+	// When enabled, will show the watermark tips when no editor is open.
+	"workbench.tips.enabled": true,
+
+	// Controls whether sticky scrolling is enabled in trees.
+	"workbench.tree.enableStickyScroll": true,
+
+	// Controls how tree folders are expanded when clicking the folder names. Note that some trees and lists might choose to ignore this setting if it is not applicable.
+	"workbench.tree.expandMode": "singleClick",
+
+	// Controls tree indentation in pixels.
+	"workbench.tree.indent": 8,
+
+	// Controls whether the tree should render indent guides.
+	"workbench.tree.renderIndentGuides": "onHover",
+
+	// Controls the number of sticky elements displayed in the tree when `workbench.tree.enableStickyScroll` is enabled.
+	"workbench.tree.stickyScrollMaxItemCount": 7,
+
+	// When enabled, trusted domain prompts will appear when opening links in trusted workspaces.
+	"workbench.trustedDomains.promptInTrustedWorkspace": false,
+
+	// Controls the visibility of view header actions. View header actions may either be always visible, or only visible when that view is focused or hovered over.
+	"workbench.view.alwaysShowHeaderActions": false,
+
+	// If an extension requests a hidden view to be shown, display a clickable status bar indicator instead.
+	"workbench.view.showQuietly": {},
+
+	// When enabled, show the new onboarding experience instead of the classic walkthrough on first launch.
+	"workbench.welcomePage.experimentalOnboarding": true,
+
+	// Deprecated, use the global `workbench.reduceMotion`.
+	// When enabled, reduce motion in welcome page.
+	"workbench.welcomePage.preferReducedMotion": false,
+
+	// When enabled, an extension's walkthrough will open upon install of the extension.
+	"workbench.welcomePage.walkthroughs.openOnInstall": true,
+
+	// Overrides colors from the currently selected color theme.
+	"workbench.colorCustomizations": {},
+
+	// Specifies the color theme used in the workbench when `window.autoDetectColorScheme` is not enabled.
+	"workbench.colorTheme": "Bearded Theme Black & Gold",
+
+	// Specifies the file icon theme used in the workbench or 'null' to not show any file icons.
+	//  - null: No file icons
+	//  - vs-minimal
+	//  - vs-seti
+	//  - material-icon-theme
+	"workbench.iconTheme": "vs-minimal",
+
+	// Specifies the color theme when system color mode is dark and `window.autoDetectColorScheme` is enabled.
+	"workbench.preferredDarkColorTheme": "Dark 2026",
+
+	// Specifies the color theme when in high contrast dark mode and `window.autoDetectHighContrast` is enabled.
+	"workbench.preferredHighContrastColorTheme": "Default High Contrast",
+
+	// Specifies the color theme when in high contrast light mode and `window.autoDetectHighContrast` is enabled.
+	"workbench.preferredHighContrastLightColorTheme": "Default High Contrast Light",
+
+	// Specifies the color theme when system color mode is light and `window.autoDetectColorScheme` is enabled.
+	"workbench.preferredLightColorTheme": "Light 2026",
+
+	// Specifies the product icon theme used.
+	//  - Default: Default
+	"workbench.productIconTheme": "Default",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.
+	"editor.acceptSuggestionOnCommitCharacter": true,
+
+	// Controls whether suggestions should be accepted on `Enter`, in addition to `Tab`. Helps to avoid ambiguity between inserting new lines or accepting suggestions.
+	//  - on
+	//  - smart: Only accept a suggestion with `Enter` when it makes a textual change.
+	//  - off
+	"editor.acceptSuggestionOnEnter": "on",
+
+	// Controls the number of lines in the editor that can be read out by a screen reader at once. When we detect a screen reader we automatically set the default to be 500. Warning: this has a performance implication for numbers larger than the default.
+	"editor.accessibilityPageSize": 500,
+
+	// Controls if the UI should run in a mode where it is optimized for screen readers.
+	//  - auto: Use platform APIs to detect when a Screen Reader is attached.
+	//  - on: Optimize for usage with a Screen Reader.
+	//  - off: Assume a screen reader is not attached.
+	"editor.accessibilitySupport": "auto",
+
+	// Controls whether to allow using variable fonts in the editor.
+	"editor.allowVariableFonts": true,
+
+	// Controls whether to allow using variable fonts in the editor in the accessibility mode.
+	"editor.allowVariableFontsInAccessibilityMode": false,
+
+	// Controls whether to allow using variable line heights in the editor.
+	"editor.allowVariableLineHeights": true,
+
+	// Controls whether the editor should automatically close brackets after the user adds an opening bracket.
+	//  - always
+	//  - languageDefined: Use language configurations to determine when to autoclose brackets.
+	//  - beforeWhitespace: Autoclose brackets only when the cursor is to the left of whitespace.
+	//  - never
+	"editor.autoClosingBrackets": "languageDefined",
+
+	// Controls whether the editor should automatically close comments after the user adds an opening comment.
+	//  - always
+	//  - languageDefined: Use language configurations to determine when to autoclose comments.
+	//  - beforeWhitespace: Autoclose comments only when the cursor is to the left of whitespace.
+	//  - never
+	"editor.autoClosingComments": "languageDefined",
+
+	// Controls whether the editor should remove adjacent closing quotes or brackets when deleting.
+	//  - always
+	//  - auto: Remove adjacent closing quotes or brackets only if they were automatically inserted.
+	//  - never
+	"editor.autoClosingDelete": "auto",
+
+	// Controls whether the editor should type over closing quotes or brackets.
+	//  - always
+	//  - auto: Type over closing quotes or brackets only if they were automatically inserted.
+	//  - never
+	"editor.autoClosingOvertype": "auto",
+
+	// Controls whether the editor should automatically close quotes after the user adds an opening quote.
+	//  - always
+	//  - languageDefined: Use language configurations to determine when to autoclose quotes.
+	//  - beforeWhitespace: Autoclose quotes only when the cursor is to the left of whitespace.
+	//  - never
+	"editor.autoClosingQuotes": "languageDefined",
+
+	// Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.
+	//  - none: The editor will not insert indentation automatically.
+	//  - keep: The editor will keep the current line's indentation.
+	//  - brackets: The editor will keep the current line's indentation and honor language defined brackets.
+	//  - advanced: The editor will keep the current line's indentation, honor language defined brackets and invoke special onEnterRules defined by languages.
+	//  - full: The editor will keep the current line's indentation, honor language defined brackets, invoke special onEnterRules defined by languages, and honor indentationRules defined by languages.
+	"editor.autoIndent": "full",
+
+	// Controls whether the editor should automatically auto-indent the pasted content.
+	"editor.autoIndentOnPaste": false,
+
+	// Controls whether the editor should automatically auto-indent the pasted content when pasted within a string. This takes effect when autoIndentOnPaste is true.
+	"editor.autoIndentOnPasteWithinString": true,
+
+	// Controls whether the editor should automatically surround selections when typing quotes or brackets.
+	//  - languageDefined: Use language configurations to determine when to automatically surround selections.
+	//  - quotes: Surround with quotes but not brackets.
+	//  - brackets: Surround with brackets but not quotes.
+	//  - never
+	"editor.autoSurround": "languageDefined",
+
+	// Controls whether bracket pair colorization is enabled or not. Use `workbench.colorCustomizations` to override the bracket highlight colors.
+	"editor.bracketPairColorization.enabled": true,
+
+	// Controls whether each bracket type has its own independent color pool.
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+
+	// Enable triggering `editor.codeActionsOnSave` when `files.autoSave` is set to `afterDelay`. Code Actions must be set to `always` to be triggered for window and focus changes.
+	"editor.codeActions.triggerOnFocusChange": false,
+
+	// Run Code Actions for the editor on save. Code Actions must be specified and the editor must not be shutting down. When `files.autoSave` is set to `afterDelay`, Code Actions will only be run when the file is saved explicitly. Example: `"source.organizeImports": "explicit" `
+	"editor.codeActionsOnSave": {},
+
+	// Enable/disable showing nearest Quick Fix within a line when not currently on a diagnostic.
+	"editor.codeActionWidget.includeNearbyQuickFixes": true,
+
+	// Enable/disable showing group headers in the Code Action menu.
+	"editor.codeActionWidget.showHeaders": true,
+
+	// Controls whether the editor shows CodeLens.
+	"editor.codeLens": true,
+
+	// Controls the font family for CodeLens.
+	"editor.codeLensFontFamily": "",
+
+	// Controls the font size in pixels for CodeLens. When set to 0, 90% of `editor.fontSize` is used.
+	"editor.codeLensFontSize": 0,
+
+	// Controls whether the editor should render the inline color decorators and color picker.
+	"editor.colorDecorators": true,
+
+	// Controls the condition to make a color picker appear from a color decorator.
+	//  - clickAndHover: Make the color picker appear both on click and hover of the color decorator
+	//  - hover: Make the color picker appear on hover of the color decorator
+	//  - click: Make the color picker appear on click of the color decorator
+	"editor.colorDecoratorsActivatedOn": "clickAndHover",
+
+	// Controls the max number of color decorators that can be rendered in an editor at once.
+	"editor.colorDecoratorsLimit": 500,
+
+	// Enable that the selection with the mouse and keys is doing column selection.
+	"editor.columnSelection": false,
+
+	// Controls if empty lines should be ignored with toggle, add or remove actions for line comments.
+	"editor.comments.ignoreEmptyLines": true,
+
+	// Controls whether a space character is inserted when commenting.
+	"editor.comments.insertSpace": true,
+
+	// Controls whether syntax highlighting should be copied into the clipboard.
+	"editor.copyWithSyntaxHighlighting": true,
+
+	// Control the cursor animation style.
+	"editor.cursorBlinking": "blink",
+
+	// Controls the height of the cursor when `editor.cursorStyle` is set to `line`. Cursor's max height depends on line height.
+	"editor.cursorHeight": 0,
+
+	// Controls whether the smooth caret animation should be enabled.
+	//  - off: Smooth caret animation is disabled.
+	//  - explicit: Smooth caret animation is enabled only when the user moves the cursor with an explicit gesture.
+	//  - on: Smooth caret animation is always enabled.
+	"editor.cursorSmoothCaretAnimation": "off",
+
+	// Controls the cursor style in insert input mode.
+	"editor.cursorStyle": "line",
+
+	// Controls the minimal number of visible leading lines (minimum 0) and trailing lines (minimum 1) surrounding the cursor. Known as 'scrollOff' or 'scrollOffset' in some other editors.
+	"editor.cursorSurroundingLines": 0,
+
+	// Controls when `editor.cursorSurroundingLines` should be enforced.
+	//  - default: `cursorSurroundingLines` is enforced only when triggered via the keyboard or API.
+	//  - all: `cursorSurroundingLines` is enforced always.
+	"editor.cursorSurroundingLinesStyle": "default",
+
+	// Controls the width of the cursor when `editor.cursorStyle` is set to `line`.
+	"editor.cursorWidth": 0,
+
+	// Controls whether inline color decorations should be shown using the default document color provider.
+	//  - auto: Show default color decorators only when no extension provides colors decorators.
+	//  - always: Always show default color decorators.
+	//  - never: Never show default color decorators.
+	"editor.defaultColorDecorators": "auto",
+
+	// Defines a default folding range provider that takes precedence over all other folding range providers. Must be the identifier of an extension contributing a folding range provider.
+	//  - null: All active folding range providers
+	//  - ms-python.black-formatter: Formatting support for Python files using the Black formatter.
+	//  - ms-vscode.cmake-tools: Extended CMake support in Visual Studio Code
+	//  - DEVSENSE.composer-php-vscode: All-in-One composer integration, quick actions, commands, automatic installation, tasks, code lenses, diagnostics, and composer.json IntelliSense.
+	//  - ms-vscode.cpptools: C/C++ IntelliSense, debugging, and code browsing.
+	//  - ms-dotnettools.csdevkit: Official C# extension from Microsoft
+	//  - ms-dotnettools.csharp: Base language support for C#
+	//  - vscode.css-language-features: Provides rich language support for CSS, LESS and SCSS files.
+	//  - Dart-Code.dart-code: Dart language support and debugger for Visual Studio Code.
+	//  - Dart-Code.flutter: Flutter support and debugger for Visual Studio Code.
+	//  - golang.go: Rich Go language support for Visual Studio Code
+	//  - vscode.html-language-features: Provides rich language support for HTML and Handlebar files
+	//  - DEVSENSE.intelli-php-vscode: AI-assisted development for PHP.
+	//  - redhat.java: Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...
+	//  - vscode.json-language-features: Provides rich language support for JSON files.
+	//  - vscode.markdown-language-features: Provides rich language support for Markdown.
+	//  - vscode.markdown-math: Adds math support to Markdown in notebooks.
+	//  - Angular.ng-template: Editor services for Angular templates
+	//  - vscode.php-language-features: Provides rich language support for PHP files.
+	//  - DEVSENSE.phptools-vscode: All-in-One PHP support - IntelliSense, Debug, Formatter, Code Lenses, Code Fixes, Linting, Refactoring, PHPUnit Tests, Web Server, and more.
+	//  - ms-vscode.powershell: Develop PowerShell modules, commands and scripts in Visual Studio Code!
+	//  - Prisma.prisma: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
+	//  - DEVSENSE.profiler-php-vscode: Support for PHP (Xdebug) profiling files and inspecting them.
+	//  - ms-python.python: Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more.
+	//  - vscode.typescript-language-features: Provides rich language support for JavaScript and TypeScript.
+	//  - Vue.volar: Language Support for Vue
+	//  - ms-azuretools.vscode-containers: Makes it easy to create, manage, and debug containerized applications.
+	//  - dbaeumer.vscode-eslint: Integrates ESLint JavaScript into VS Code.
+	//  - vscjava.vscode-gradle: Manage Gradle Projects, run Gradle tasks and provide better Gradle file authoring experience in VS Code
+	//  - GraphQL.vscode-graphql: GraphQL LSP extension that adds autocompletion, validation, go to definition, hover, outline and more.
+	//  - vscjava.vscode-java-debug: A lightweight Java debugger for Visual Studio Code
+	//  - vscjava.vscode-java-pack: Popular extensions for Java development that provides Java IntelliSense, debugging, testing, Maven/Gradle support, project management and more
+	//  - vscjava.vscode-maven: Manage Maven projects, execute goals, generate project from archetype, improve user experience for Java developers.
+	//  - ms-python.vscode-pylance: A performant, feature-rich language server for Python in VS Code
+	//  - vmware.vscode-spring-boot: Provides validation and content assist for Spring Boot `application.properties`, `application.yml` properties files. As well as Boot-specific support for `.java` files.
+	//  - redhat.vscode-xml: XML Language Support by Red Hat
+	//  - redhat.vscode-yaml: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
+	//  - Katsute.code-background: The most advanced background image extension for VSCode
+	//  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
+	//  - ms-vscode.cpp-devtools: Enhanced development tools for C++ in VS Code
+	//  - vscode.debug-auto-launch: Helper for auto-attach feature when node-debug extensions are not active.
+	//  - vscode.debug-server-ready: Open URI in browser if server under debugging is ready.
+	//  - ms-python.debugpy: Python Debugger extension using debugpy.
+	//  - dotenv.dotenv-vscode: Official Dotenv. Syntax highlighting, auto-cloaking, auto-completion, in-code secret peeking, and optionally dotenv-vault.
+	//  - EditorConfig.EditorConfig: EditorConfig Support for Visual Studio Code
+	//  - vscode.emmet: Emmet support for VS Code
+	//  - vscode.extension-editing: Provides linting capabilities for authoring extensions.
+	//  - vscode.git: Git SCM Integration
+	//  - vscode.git-base: Git static contributions and pickers.
+	//  - vscode.github: GitHub features for VS Code
+	//  - vscode.github-authentication: GitHub Authentication Provider
+	//  - eamodio.gitlens: Supercharge Git within VS Code — Visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more
+	//  - vscode.grunt: Extension to add Grunt capabilities to VS Code.
+	//  - vscode.gulp: Extension to add Gulp capabilities to VSCode.
+	//  - vscode.ipynb: Provides basic support for opening and reading Jupyter's .ipynb notebook files
+	//  - vscode.jake: Extension to add Jake capabilities to VS Code.
+	//  - ms-vscode.js-debug: An extension for debugging Node.js programs and Chrome.
+	//  - ms-vscode.js-debug-companion: Companion extension to js-debug that provides capability for remote debugging
+	//  - PKief.material-icon-theme: Material Design Icons for Visual Studio Code
+	//  - vscode.media-preview: Provides VS Code's built-in previews for images, audio, and video
+	//  - vscode.merge-conflict: Highlighting and commands for inline merge conflicts.
+	//  - vscode.mermaid-markdown-features: Adds Mermaid diagram support to built-in chats, Markdown previews, and notebooks.
+	//  - vscode.microsoft-authentication: Microsoft authentication provider
+	//  - vscode.npm: Extension to add task support for npm scripts.
+	//  - esbenp.prettier-vscode: Code formatter using prettier
+	//  - vscode.references-view: Reference Search results as separate, stable view in the sidebar
+	//  - vscode.search-result: Provides syntax highlighting and language features for tabbed search results.
+	//  - vscode.simple-browser: A very basic built-in webview for displaying web content.
+	//  - vscode.terminal-suggest: Extension to add terminal completions for zsh, bash, and fish terminals.
+	//  - vscode.tunnel-forwarding: Allows forwarding local ports to be accessible over the internet.
+	//  - ms-dotnettools.vscode-dotnet-runtime: This extension installs and manages different versions of the .NET SDK and Runtime.
+	//  - wix.vscode-import-cost: Display import/require package size in the editor
+	//  - vscjava.vscode-java-dependency: Manage Java projects in Visual Studio Code
+	//  - vscjava.vscode-java-test: Run and debug JUnit or TestNG test cases.
+	//  - ms-vscode.vscode-js-profile-table: Text visualizer for profiles taken from the JavaScript debugger
+	//  - laravel.vscode-laravel: Official VS Code extension for Laravel
+	//  - ms-python.vscode-python-envs: Provides a unified python environment experience
+	//  - msjsdiag.vscode-react-native: Debugging and integrated commands for React Native
+	//  - vscjava.vscode-spring-boot-dashboard: Spring Boot Dashboard for VS Code
+	//  - vscjava.vscode-spring-initializr: A lightweight extension based on Spring Initializr to generate quick start Spring Boot Java projects.
+	//  - bradlc.vscode-tailwindcss: Intelligent Tailwind CSS tooling for VS Code
+	"editor.defaultFoldingRangeProvider": null,
+
+	// Defines a default formatter which takes precedence over all other formatter settings. Must be the identifier of an extension contributing a formatter.
+	//  - null: None
+	//  - vscode.json-language-features: Provides rich language support for JSON files.
+	//  - esbenp.prettier-vscode: Code formatter using prettier
+	//  - ms-python.black-formatter: Formatting support for Python files using the Black formatter.
+	//  - ms-vscode.cmake-tools: Extended CMake support in Visual Studio Code
+	//  - DEVSENSE.composer-php-vscode: All-in-One composer integration, quick actions, commands, automatic installation, tasks, code lenses, diagnostics, and composer.json IntelliSense.
+	//  - ms-vscode.cpptools: C/C++ IntelliSense, debugging, and code browsing.
+	//  - ms-dotnettools.csdevkit: Official C# extension from Microsoft
+	//  - ms-dotnettools.csharp: Base language support for C#
+	//  - vscode.css-language-features: Provides rich language support for CSS, LESS and SCSS files.
+	//  - Dart-Code.dart-code: Dart language support and debugger for Visual Studio Code.
+	//  - dotenv.dotenv-vscode: Official Dotenv. Syntax highlighting, auto-cloaking, auto-completion, in-code secret peeking, and optionally dotenv-vault.
+	//  - Dart-Code.flutter: Flutter support and debugger for Visual Studio Code.
+	//  - golang.go: Rich Go language support for Visual Studio Code
+	//  - vscode.html-language-features: Provides rich language support for HTML and Handlebar files
+	//  - DEVSENSE.intelli-php-vscode: AI-assisted development for PHP.
+	//  - redhat.java: Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...
+	//  - vscode.markdown-language-features: Provides rich language support for Markdown.
+	//  - vscode.markdown-math: Adds math support to Markdown in notebooks.
+	//  - Angular.ng-template: Editor services for Angular templates
+	//  - vscode.php-language-features: Provides rich language support for PHP files.
+	//  - DEVSENSE.phptools-vscode: All-in-One PHP support - IntelliSense, Debug, Formatter, Code Lenses, Code Fixes, Linting, Refactoring, PHPUnit Tests, Web Server, and more.
+	//  - ms-vscode.powershell: Develop PowerShell modules, commands and scripts in Visual Studio Code!
+	//  - Prisma.prisma: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
+	//  - DEVSENSE.profiler-php-vscode: Support for PHP (Xdebug) profiling files and inspecting them.
+	//  - ms-python.python: Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more.
+	//  - vscode.typescript-language-features: Provides rich language support for JavaScript and TypeScript.
+	//  - Vue.volar: Language Support for Vue
+	//  - ms-azuretools.vscode-containers: Makes it easy to create, manage, and debug containerized applications.
+	//  - dbaeumer.vscode-eslint: Integrates ESLint JavaScript into VS Code.
+	//  - vscjava.vscode-gradle: Manage Gradle Projects, run Gradle tasks and provide better Gradle file authoring experience in VS Code
+	//  - GraphQL.vscode-graphql: GraphQL LSP extension that adds autocompletion, validation, go to definition, hover, outline and more.
+	//  - vscjava.vscode-java-debug: A lightweight Java debugger for Visual Studio Code
+	//  - vscjava.vscode-java-pack: Popular extensions for Java development that provides Java IntelliSense, debugging, testing, Maven/Gradle support, project management and more
+	//  - vscjava.vscode-maven: Manage Maven projects, execute goals, generate project from archetype, improve user experience for Java developers.
+	//  - ms-python.vscode-pylance: A performant, feature-rich language server for Python in VS Code
+	//  - vmware.vscode-spring-boot: Provides validation and content assist for Spring Boot `application.properties`, `application.yml` properties files. As well as Boot-specific support for `.java` files.
+	//  - redhat.vscode-xml: XML Language Support by Red Hat
+	//  - redhat.vscode-yaml: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
+	//  - Katsute.code-background: The most advanced background image extension for VSCode
+	//  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
+	//  - ms-vscode.cpp-devtools: Enhanced development tools for C++ in VS Code
+	//  - vscode.debug-auto-launch: Helper for auto-attach feature when node-debug extensions are not active.
+	//  - vscode.debug-server-ready: Open URI in browser if server under debugging is ready.
+	//  - ms-python.debugpy: Python Debugger extension using debugpy.
+	//  - EditorConfig.EditorConfig: EditorConfig Support for Visual Studio Code
+	//  - vscode.emmet: Emmet support for VS Code
+	//  - vscode.extension-editing: Provides linting capabilities for authoring extensions.
+	//  - vscode.git: Git SCM Integration
+	//  - vscode.git-base: Git static contributions and pickers.
+	//  - vscode.github: GitHub features for VS Code
+	//  - vscode.github-authentication: GitHub Authentication Provider
+	//  - eamodio.gitlens: Supercharge Git within VS Code — Visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more
+	//  - vscode.grunt: Extension to add Grunt capabilities to VS Code.
+	//  - vscode.gulp: Extension to add Gulp capabilities to VSCode.
+	//  - vscode.ipynb: Provides basic support for opening and reading Jupyter's .ipynb notebook files
+	//  - vscode.jake: Extension to add Jake capabilities to VS Code.
+	//  - ms-vscode.js-debug: An extension for debugging Node.js programs and Chrome.
+	//  - ms-vscode.js-debug-companion: Companion extension to js-debug that provides capability for remote debugging
+	//  - PKief.material-icon-theme: Material Design Icons for Visual Studio Code
+	//  - vscode.media-preview: Provides VS Code's built-in previews for images, audio, and video
+	//  - vscode.merge-conflict: Highlighting and commands for inline merge conflicts.
+	//  - vscode.mermaid-markdown-features: Adds Mermaid diagram support to built-in chats, Markdown previews, and notebooks.
+	//  - vscode.microsoft-authentication: Microsoft authentication provider
+	//  - vscode.npm: Extension to add task support for npm scripts.
+	//  - vscode.references-view: Reference Search results as separate, stable view in the sidebar
+	//  - vscode.search-result: Provides syntax highlighting and language features for tabbed search results.
+	//  - vscode.simple-browser: A very basic built-in webview for displaying web content.
+	//  - vscode.terminal-suggest: Extension to add terminal completions for zsh, bash, and fish terminals.
+	//  - vscode.tunnel-forwarding: Allows forwarding local ports to be accessible over the internet.
+	//  - ms-dotnettools.vscode-dotnet-runtime: This extension installs and manages different versions of the .NET SDK and Runtime.
+	//  - wix.vscode-import-cost: Display import/require package size in the editor
+	//  - vscjava.vscode-java-dependency: Manage Java projects in Visual Studio Code
+	//  - vscjava.vscode-java-test: Run and debug JUnit or TestNG test cases.
+	//  - ms-vscode.vscode-js-profile-table: Text visualizer for profiles taken from the JavaScript debugger
+	//  - laravel.vscode-laravel: Official VS Code extension for Laravel
+	//  - ms-python.vscode-python-envs: Provides a unified python environment experience
+	//  - msjsdiag.vscode-react-native: Debugging and integrated commands for React Native
+	//  - vscjava.vscode-spring-boot-dashboard: Spring Boot Dashboard for VS Code
+	//  - vscjava.vscode-spring-initializr: A lightweight extension based on Spring Initializr to generate quick start Spring Boot Java projects.
+	//  - bradlc.vscode-tailwindcss: Intelligent Tailwind CSS tooling for VS Code
+	"editor.defaultFormatter": null,
+
+	// Controls whether the Go to Definition mouse gesture always opens the peek widget.
+	"editor.definitionLinkOpensInPeek": false,
+
+	// Controls whether `editor.tabSize` and `editor.insertSpaces` will be automatically detected when a file is opened based on the file contents.
+	"editor.detectIndentation": true,
+
+	// Controls whether double-clicking next to a bracket or quote selects the content inside.
+	"editor.doubleClickSelectsBlock": true,
+
+	// Controls whether the editor should allow moving selections via drag and drop.
+	"editor.dragAndDrop": true,
+
+	// Controls whether you can drag and drop a file into a text editor by holding down the `Shift` key (instead of opening the file in an editor).
+	"editor.dropIntoEditor.enabled": true,
+
+	// Configures the preferred type of edit to use when dropping content.
+	// 
+	// This is an ordered list of edit kinds. The first available edit of a preferred kind will be used.
+	"editor.dropIntoEditor.preferences": [],
+
+	// Controls if a widget is shown when dropping files into the editor. This widget lets you control how the file is dropped.
+	//  - afterDrop: Show the drop selector widget after a file is dropped into the editor.
+	//  - never: Never show the drop selector widget. Instead the default drop provider is always used.
+	"editor.dropIntoEditor.showDropSelector": "afterDrop",
+
+	// Sets whether the EditContext API should be used instead of the text area to power input in the editor.
+	"editor.editContext": true,
+
+	// Controls whether copying without a selection copies the current line.
+	"editor.emptySelectionClipboard": true,
+
+	// Controls whether the tokenization should happen asynchronously on a web worker.
+	"editor.experimental.asyncTokenization": true,
+
+	// Controls whether async tokenization should be logged. For debugging only.
+	"editor.experimental.asyncTokenizationLogging": false,
+
+	// Controls whether async tokenization should be verified against legacy background tokenization. Might slow down tokenization. For debugging only.
+	"editor.experimental.asyncTokenizationVerification": false,
+
+	// Controls whether tree sitter parsing should be turned on for css. This will take precedence over `editor.experimental.treeSitterTelemetry` for css.
+	"editor.experimental.preferTreeSitter.css": false,
+
+	// Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `editor.experimental.treeSitterTelemetry` for ini.
+	"editor.experimental.preferTreeSitter.ini": false,
+
+	// Controls whether tree sitter parsing should be turned on for regex. This will take precedence over `editor.experimental.treeSitterTelemetry` for regex.
+	"editor.experimental.preferTreeSitter.regex": false,
+
+	// Controls whether tree sitter parsing should be turned on for typescript. This will take precedence over `editor.experimental.treeSitterTelemetry` for typescript.
+	"editor.experimental.preferTreeSitter.typescript": false,
+
+	// Controls whether tree sitter parsing should be turned on and telemetry collected. Setting `editor.experimental.preferTreeSitter` for specific languages will take precedence.
+	"editor.experimental.treeSitterTelemetry": false,
+
+	// Controls whether to use the experimental GPU acceleration to render the editor.
+	//  - off: Use regular DOM-based rendering.
+	//  - on: Use GPU acceleration.
+	"editor.experimentalGpuAcceleration": "off",
+
+	// Controls whether whitespace is rendered with a new, experimental method.
+	//  - svg: Use a new rendering method with svgs.
+	//  - font: Use a new rendering method with font characters.
+	//  - off: Use the stable rendering method.
+	"editor.experimentalWhitespaceRendering": "svg",
+
+	// Scrolling speed multiplier when pressing `Alt`.
+	"editor.fastScrollSensitivity": 5,
+
+	// Controls whether the Find Widget should add extra lines on top of the editor. When true, you can scroll beyond the first line when the Find Widget is visible.
+	"editor.find.addExtraSpaceOnTop": true,
+
+	// Controls the condition for turning on Find in Selection automatically.
+	//  - never: Never turn on Find in Selection automatically (default).
+	//  - always: Always turn on Find in Selection automatically.
+	//  - multiline: Turn on Find in Selection automatically when multiple lines of content are selected.
+	"editor.find.autoFindInSelection": "never",
+
+	// Controls whether the Find Widget closes after an explicit find navigation command lands on a result.
+	"editor.find.closeOnResult": false,
+
+	// Controls whether the cursor should jump to find matches while typing.
+	"editor.find.cursorMoveOnType": true,
+
+	// Controls whether the Find Widget should search as you type.
+	"editor.find.findOnType": true,
+
+	// Controls how the find widget history should be stored
+	//  - never: Do not store search history from the find widget.
+	//  - workspace: Store search history across the active workspace
+	"editor.find.history": "workspace",
+
+	// Controls whether the search automatically restarts from the beginning (or the end) when no further matches can be found.
+	"editor.find.loop": true,
+
+	// Controls how the replace widget history should be stored
+	//  - never: Do not store history from the replace widget.
+	//  - workspace: Store replace history across the active workspace
+	"editor.find.replaceHistory": "workspace",
+
+	// Controls whether the search string in the Find Widget is seeded from the editor selection.
+	//  - never: Never seed search string from the editor selection.
+	//  - always: Always seed search string from the editor selection, including word at cursor position.
+	//  - selection: Only seed search string from the editor selection.
+	"editor.find.seedSearchStringFromSelection": "always",
+
+	// Controls whether the editor has code folding enabled.
+	"editor.folding": true,
+
+	// Controls whether the editor should highlight folded ranges.
+	"editor.foldingHighlight": true,
+
+	// Controls whether the editor automatically collapses import ranges.
+	"editor.foldingImportsByDefault": false,
+
+	// The maximum number of foldable regions. Increasing this value may result in the editor becoming less responsive when the current source has a large number of foldable regions.
+	"editor.foldingMaximumRegions": 5000,
+
+	// Controls the strategy for computing folding ranges.
+	//  - auto: Use a language-specific folding strategy if available, else the indentation-based one.
+	//  - indentation: Use the indentation-based folding strategy.
+	"editor.foldingStrategy": "auto",
+
+	// Controls the font family.
+	"editor.fontFamily": "Consolas, 'Courier New', monospace",
+
+	// Configures font ligatures or font features. Can be either a boolean to enable/disable ligatures or a string for the value of the CSS 'font-feature-settings' property.
+	"editor.fontLigatures": false,
+
+	// Controls the font size in pixels.
+	"editor.fontSize": 14,
+
+	// Configures font variations. Can be either a boolean to enable/disable the translation from font-weight to font-variation-settings or a string for the value of the CSS 'font-variation-settings' property.
+	"editor.fontVariations": false,
+
+	// Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
+	"editor.fontWeight": "normal",
+
+	// Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+	"editor.formatOnPaste": false,
+
+	// Format a file on save. A formatter must be available and the editor must not be shutting down. When `files.autoSave` is set to `afterDelay`, the file will only be formatted when saved explicitly.
+	"editor.formatOnSave": false,
+
+	// Controls if format on save formats the whole file or only modifications. Only applies when `editor.formatOnSave` is enabled.
+	//  - file: Format the whole file.
+	//  - modifications: Format modifications. Requires source control and a formatter that supports 'Format Selection'.
+	//  - modificationsIfAvailable: Will attempt to format modifications only (requires source control and a formatter that supports 'Format Selection'). If source control can't be used, then the whole file will be formatted.
+	"editor.formatOnSaveMode": "file",
+
+	// Controls whether the editor should automatically format the line after typing.
+	"editor.formatOnType": false,
+
+	// Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.
+	"editor.glyphMargin": true,
+
+	// Alternative command id that is being executed when the result of 'Go to Declaration' is the current location.
+	"editor.gotoLocation.alternativeDeclarationCommand": "editor.action.goToReferences",
+
+	// Alternative command id that is being executed when the result of 'Go to Definition' is the current location.
+	"editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
+
+	// Alternative command id that is being executed when the result of 'Go to Implementation' is the current location.
+	"editor.gotoLocation.alternativeImplementationCommand": "",
+
+	// Alternative command id that is being executed when the result of 'Go to Reference' is the current location.
+	"editor.gotoLocation.alternativeReferenceCommand": "",
+
+	// Alternative command id that is being executed when the result of 'Go to Type Definition' is the current location.
+	"editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.goToReferences",
+
+	// This setting is deprecated, please use separate settings like 'editor.editor.gotoLocation.multipleDefinitions' or 'editor.editor.gotoLocation.multipleImplementations' instead.
+	// 
+	"editor.gotoLocation.multiple": null,
+
+	// Controls the behavior the 'Go to Declaration'-command when multiple target locations exist.
+	//  - peek: Show Peek view of the results (default)
+	//  - gotoAndPeek: Go to the primary result and show a Peek view
+	//  - goto: Go to the primary result and enable Peek-less navigation to others
+	"editor.gotoLocation.multipleDeclarations": "peek",
+
+	// Controls the behavior the 'Go to Definition'-command when multiple target locations exist.
+	//  - peek: Show Peek view of the results (default)
+	//  - gotoAndPeek: Go to the primary result and show a Peek view
+	//  - goto: Go to the primary result and enable Peek-less navigation to others
+	"editor.gotoLocation.multipleDefinitions": "peek",
+
+	// Controls the behavior the 'Go to Implementations'-command when multiple target locations exist.
+	//  - peek: Show Peek view of the results (default)
+	//  - gotoAndPeek: Go to the primary result and show a Peek view
+	//  - goto: Go to the primary result and enable Peek-less navigation to others
+	"editor.gotoLocation.multipleImplementations": "peek",
+
+	// Controls the behavior the 'Go to References'-command when multiple target locations exist.
+	//  - peek: Show Peek view of the results (default)
+	//  - gotoAndPeek: Go to the primary result and show a Peek view
+	//  - goto: Go to the primary result and enable Peek-less navigation to others
+	"editor.gotoLocation.multipleReferences": "peek",
+
+	// Controls the behavior the 'Go to Type Definition'-command when multiple target locations exist.
+	//  - peek: Show Peek view of the results (default)
+	//  - gotoAndPeek: Go to the primary result and show a Peek view
+	//  - goto: Go to the primary result and enable Peek-less navigation to others
+	"editor.gotoLocation.multipleTypeDefinitions": "peek",
+
+	// Controls whether bracket pair guides are enabled or not.
+	//  - true: Enables bracket pair guides.
+	//  - active: Enables bracket pair guides only for the active bracket pair.
+	//  - false: Disables bracket pair guides.
+	"editor.guides.bracketPairs": false,
+
+	// Controls whether horizontal bracket pair guides are enabled or not.
+	//  - true: Enables horizontal guides as addition to vertical bracket pair guides.
+	//  - active: Enables horizontal guides only for the active bracket pair.
+	//  - false: Disables horizontal bracket pair guides.
+	"editor.guides.bracketPairsHorizontal": "active",
+
+	// Controls whether the editor should highlight the active bracket pair.
+	"editor.guides.highlightActiveBracketPair": true,
+
+	// Controls whether the editor should highlight the active indent guide.
+	//  - true: Highlights the active indent guide.
+	//  - always: Highlights the active indent guide even if bracket guides are highlighted.
+	//  - false: Do not highlight the active indent guide.
+	"editor.guides.highlightActiveIndentation": true,
+
+	// Controls whether the editor should render indent guides.
+	"editor.guides.indentation": true,
+
+	// Controls whether the cursor should be hidden in the overview ruler.
+	"editor.hideCursorInOverviewRuler": false,
+
+	// Prefer showing hovers above the line, if there's space.
+	"editor.hover.above": true,
+
+	// Controls the delay in milliseconds after which the hover is shown.
+	"editor.hover.delay": 300,
+
+	// Controls whether the hover is shown.
+	//  - on: Hover is enabled.
+	//  - off: Hover is disabled.
+	//  - onKeyboardModifier: Hover is shown when holding `Control` or `Alt` (the opposite modifier of `editor.multiCursorModifier`)
+	"editor.hover.enabled": "on",
+
+	// Controls the delay in milliseconds after which the hover is hidden. Requires `editor.hover.sticky` to be enabled.
+	"editor.hover.hidingDelay": 300,
+
+	// Controls whether long line warning hovers are shown, such as when tokenization is skipped or rendering is paused.
+	"editor.hover.showLongLineWarning": true,
+
+	// Controls whether the hover should remain visible when mouse is moved over it.
+	"editor.hover.sticky": true,
+
+	// The number of spaces used for indentation or `"tabSize"` to use the value from `editor.tabSize`. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+	"editor.indentSize": "tabSize",
+
+	// Make scrolling inertial - mostly useful with touchpad on linux.
+	"editor.inertialScroll": false,
+
+	// Enables the inlay hints in the editor.
+	//  - on: Inlay hints are enabled
+	//  - onUnlessPressed: Inlay hints are showing by default and hide when holding Ctrl+Alt
+	//  - offUnlessPressed: Inlay hints are hidden by default and show when holding Ctrl+Alt
+	//  - off: Inlay hints are disabled
+	"editor.inlayHints.enabled": "on",
+
+	// Controls font family of inlay hints in the editor. When set to empty, the `editor.fontFamily` is used.
+	"editor.inlayHints.fontFamily": "",
+
+	// Controls font size of inlay hints in the editor. As default the `editor.fontSize` is used when the configured value is less than `5` or greater than the editor font size.
+	"editor.inlayHints.fontSize": 0,
+
+	// Maximum overall length of inlay hints, for a single line, before they get truncated by the editor. Set to `0` to never truncate
+	"editor.inlayHints.maximumLength": 43,
+
+	// Enables the padding around the inlay hints in the editor.
+	"editor.inlayHints.padding": false,
+
+	// Controls whether the accessibility hint should be provided to screen reader users when an inline completion is shown.
+	"editor.inlineCompletionsAccessibilityVerbose": false,
+
+	// Controls whether showing a suggestion will shift the code to make space for the suggestion inline.
+	"editor.inlineSuggest.edits.allowCodeShifting": "always",
+
+	// Controls whether larger suggestions can be shown side by side.
+	//  - auto: Larger suggestions will show side by side if there is enough space, otherwise they will be shown below.
+	//  - never: Larger suggestions are never shown side by side and will always be shown below.
+	"editor.inlineSuggest.edits.renderSideBySide": "auto",
+
+	// Controls whether the suggestion will show as collapsed until jumping to it.
+	"editor.inlineSuggest.edits.showCollapsed": false,
+
+	// Controls whether long distance inline suggestions are shown.
+	"editor.inlineSuggest.edits.showLongDistanceHint": true,
+
+	// Controls whether to automatically show inline suggestions in the editor.
+	"editor.inlineSuggest.enabled": true,
+
+	// Controls whether to send request information from the inline suggestion provider.
+	"editor.inlineSuggest.experimental.emptyResponseInformation": true,
+
+	// Controls whether to show inline suggestions when there is a suggest conflict.
+	"editor.inlineSuggest.experimental.showOnSuggestConflict": "never",
+
+	// Suppresses inline completions for specified extension IDs -- comma separated.
+	"editor.inlineSuggest.experimental.suppressInlineSuggestions": "",
+
+	// Controls the font family of the inline suggestions.
+	"editor.inlineSuggest.fontFamily": "default",
+
+	// Controls the minimal delay in milliseconds after which inline suggestions are shown after typing.
+	"editor.inlineSuggest.minShowDelay": 0,
+
+	// Controls when to show the inline suggestion toolbar.
+	//  - always: Show the inline suggestion toolbar whenever an inline suggestion is shown.
+	//  - onHover: Show the inline suggestion toolbar when hovering over an inline suggestion.
+	//  - never: Never show the inline suggestion toolbar.
+	"editor.inlineSuggest.showToolbar": "onHover",
+
+	// Controls whether inline suggestions are suppressed when in snippet mode.
+	"editor.inlineSuggest.suppressInSnippetMode": true,
+
+	// Controls how inline suggestions interact with the suggest widget. If enabled, the suggest widget is not shown automatically when inline suggestions are available.
+	"editor.inlineSuggest.suppressSuggestions": false,
+
+	// Controls whether to show syntax highlighting for inline suggestions in the editor.
+	"editor.inlineSuggest.syntaxHighlightingEnabled": true,
+
+	// Controls whether to trigger a command when the inline suggestion provider changes.
+	"editor.inlineSuggest.triggerCommandOnProviderChange": false,
+
+	// Insert spaces when pressing `Tab`. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+	"editor.insertSpaces": true,
+
+	// Defines the bracket symbols that increase or decrease the indentation.
+	"editor.language.brackets": null,
+
+	// Defines the bracket pairs that are colorized by their nesting level if bracket pair colorization is enabled.
+	"editor.language.colorizedBracketPairs": null,
+
+	// Special handling for large files to disable certain memory intensive features.
+	"editor.largeFileOptimizations": true,
+
+	// Controls the letter spacing in pixels.
+	"editor.letterSpacing": 0,
+
+	// Enables the Code Action lightbulb in the editor.
+	//  - off: Disable the code action menu.
+	//  - onCode: Show the code action menu when the cursor is on lines with code.
+	//  - on: Show the code action menu when the cursor is on lines with code or on empty lines.
+	"editor.lightbulb.enabled": "onCode",
+
+	// Controls the line height. 
+	//  - Use 0 to automatically compute the line height from the font size.
+	//  - Values between 0 and 8 will be used as a multiplier with the font size.
+	//  - Values greater than or equal to 8 will be used as effective values.
+	"editor.lineHeight": 0,
+
+	// Controls the display of line numbers.
+	//  - off: Line numbers are not rendered.
+	//  - on: Line numbers are rendered as absolute number.
+	//  - relative: Line numbers are rendered as distance in lines to cursor position.
+	//  - interval: Line numbers are rendered every 10 lines.
+	"editor.lineNumbers": "on",
+
+	// Controls whether the editor has linked editing enabled. Depending on the language, related symbols such as HTML tags, are updated while editing.
+	"editor.linkedEditing": false,
+
+	// Controls whether the editor should detect links and make them clickable.
+	"editor.links": true,
+
+	// Highlight matching brackets.
+	"editor.matchBrackets": "always",
+
+	// Lines above this length will not be tokenized for performance reasons
+	"editor.maxTokenizationLineLength": 20000,
+
+	// Controls whether the minimap is hidden automatically.
+	//  - none: The minimap is always shown.
+	//  - mouseover: The minimap is hidden when mouse is not over the minimap and shown when mouse is over the minimap.
+	//  - scroll: The minimap is only shown when the editor is scrolled
+	"editor.minimap.autohide": "none",
+
+	// Controls whether the minimap is shown.
+	"editor.minimap.enabled": true,
+
+	// Defines the regular expression used to find section headers in comments. The regex must contain a named match group `label` (written as `(?<label>.+)`) that encapsulates the section header, otherwise it will not work. Optionally you can include another match group named `separator`. Use \n in the pattern to match multi-line headers.
+	"editor.minimap.markSectionHeaderRegex": "\\bMARK:\\s*(?<separator>-?)\\s*(?<label>.*)$",
+
+	// Limit the width of the minimap to render at most a certain number of columns.
+	"editor.minimap.maxColumn": 120,
+
+	// Render the actual characters on a line as opposed to color blocks.
+	"editor.minimap.renderCharacters": true,
+
+	// Scale of content drawn in the minimap: 1, 2 or 3.
+	"editor.minimap.scale": 1,
+
+	// Controls the font size of section headers in the minimap.
+	"editor.minimap.sectionHeaderFontSize": 9,
+
+	// Controls the amount of space (in pixels) between characters of section header. This helps the readability of the header in small font sizes.
+	"editor.minimap.sectionHeaderLetterSpacing": 1,
+
+	// Controls whether MARK: comments are shown as section headers in the minimap.
+	"editor.minimap.showMarkSectionHeaders": true,
+
+	// Controls whether named regions are shown as section headers in the minimap.
+	"editor.minimap.showRegionSectionHeaders": true,
+
+	// Controls when the minimap slider is shown.
+	"editor.minimap.showSlider": "mouseover",
+
+	// Controls the side where to render the minimap.
+	"editor.minimap.side": "right",
+
+	// Controls the size of the minimap.
+	//  - proportional: The minimap has the same size as the editor contents (and might scroll).
+	//  - fill: The minimap will stretch or shrink as necessary to fill the height of the editor (no scrolling).
+	//  - fit: The minimap will shrink as necessary to never be larger than the editor (no scrolling).
+	"editor.minimap.size": "proportional",
+
+	// Controls what happens when middle mouse button is clicked in the editor.
+	"editor.mouseMiddleClickAction": "default",
+
+	// A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events.
+	"editor.mouseWheelScrollSensitivity": 1,
+
+	// Zoom the font of the editor when using mouse wheel and holding `Ctrl`.
+	"editor.mouseWheelZoom": false,
+
+	// Controls the max number of cursors that can be in an active editor at once.
+	"editor.multiCursorLimit": 10000,
+
+	// Merge multiple cursors when they are overlapping.
+	"editor.multiCursorMergeOverlapping": true,
+
+	// The modifier to be used to add multiple cursors with the mouse. The Go to Definition and Open Link mouse gestures will adapt such that they do not conflict with the [multicursor modifier](https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier).
+	//  - ctrlCmd: Maps to `Control` on Windows and Linux and to `Command` on macOS.
+	//  - alt: Maps to `Alt` on Windows and Linux and to `Option` on macOS.
+	"editor.multiCursorModifier": "alt",
+
+	// Controls pasting when the line count of the pasted text matches the cursor count.
+	//  - spread: Each cursor pastes a single line of the text.
+	//  - full: Each cursor pastes the full text.
+	"editor.multiCursorPaste": "spread",
+
+	// Controls whether occurrences should be highlighted across open files.
+	//  - off: Does not highlight occurrences.
+	//  - singleFile: Highlights occurrences only in the current file.
+	//  - multiFile: Experimental: Highlights occurrences across all valid open files.
+	"editor.occurrencesHighlight": "singleFile",
+
+	// Controls the delay in milliseconds after which occurrences are highlighted.
+	"editor.occurrencesHighlightDelay": 0,
+
+	// Controls the cursor style in overtype input mode.
+	"editor.overtypeCursorStyle": "block",
+
+	// Controls whether pasting should overtype.
+	"editor.overtypeOnPaste": true,
+
+	// Controls whether a border should be drawn around the overview ruler.
+	"editor.overviewRulerBorder": true,
+
+	// Controls the amount of space between the bottom edge of the editor and the last line.
+	"editor.padding.bottom": 0,
+
+	// Controls the amount of space between the top edge of the editor and the first line.
+	"editor.padding.top": 0,
+
+	// Controls whether the parameter hints menu cycles or closes when reaching the end of the list.
+	"editor.parameterHints.cycle": true,
+
+	// Enables a pop-up that shows parameter documentation and type information as you type.
+	"editor.parameterHints.enabled": true,
+
+	// Controls whether you can paste content in different ways.
+	"editor.pasteAs.enabled": true,
+
+	// Configures the preferred type of edit to use when pasting content.
+	// 
+	// This is an ordered list of edit kinds. The first available edit of a preferred kind will be used.
+	"editor.pasteAs.preferences": [],
+
+	// Controls if a widget is shown when pasting content in to the editor. This widget lets you control how the file is pasted.
+	//  - afterPaste: Show the paste selector widget after content is pasted into the editor.
+	//  - never: Never show the paste selector widget. Instead the default pasting behavior is always used.
+	"editor.pasteAs.showPasteSelector": "afterPaste",
+
+	// Controls whether to focus the inline editor or the tree in the peek widget.
+	//  - tree: Focus the tree when opening peek
+	//  - editor: Focus the editor when opening peek
+	"editor.peekWidgetDefaultFocus": "tree",
+
+	// Controls whether suggestions should automatically show up while typing. This can be controlled for typing in comments, strings, and other code. Quick suggestion can be configured to show as ghost text or with the suggest widget. Also be aware of the `editor.suggestOnTriggerCharacters`-setting which controls if suggestions are triggered by special characters.
+	"editor.quickSuggestions": {
+		"other": "offWhenInlineCompletions",
+		"comments": "off",
+		"strings": "off"
+	},
+
+	// Controls the delay in milliseconds after which quick suggestions will show up.
+	"editor.quickSuggestionsDelay": 10,
+
+	// Deprecated, use `editor.linkedEditing` instead.
+	// Controls whether the editor auto renames on type.
+	"editor.renameOnType": false,
+
+	// Controls whether the editor should render control characters.
+	"editor.renderControlCharacters": true,
+
+	// Render last line number when the file ends with a newline.
+	"editor.renderFinalNewline": "on",
+
+	// Controls how the editor should render the current line highlight.
+	//  - none
+	//  - gutter
+	//  - line
+	//  - all: Highlights both the gutter and the current line.
+	"editor.renderLineHighlight": "line",
+
+	// Controls if the editor should render the current line highlight only when the editor is focused.
+	"editor.renderLineHighlightOnlyWhenFocus": false,
+
+	// Whether to render rich screen reader content when the `editor.editContext` setting is enabled.
+	"editor.renderRichScreenReaderContent": false,
+
+	// Controls how the editor should render whitespace characters.
+	//  - none
+	//  - boundary: Render whitespace characters except for single spaces between words.
+	//  - selection: Render whitespace characters only on selected text.
+	//  - trailing: Render only trailing whitespace characters.
+	//  - all
+	"editor.renderWhitespace": "selection",
+
+	// Controls whether selections should have rounded corners.
+	"editor.roundedSelection": true,
+
+	// Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.
+	"editor.rulers": [],
+
+	// Control whether inline suggestions are announced by a screen reader.
+	"editor.screenReaderAnnounceInlineSuggestion": true,
+
+	// Controls the visibility of the horizontal scrollbar.
+	//  - auto: The horizontal scrollbar will be visible only when necessary.
+	//  - visible: The horizontal scrollbar will always be visible.
+	//  - hidden: The horizontal scrollbar will always be hidden.
+	"editor.scrollbar.horizontal": "auto",
+
+	// The height of the horizontal scrollbar.
+	"editor.scrollbar.horizontalScrollbarSize": 12,
+
+	// When set, the horizontal scrollbar will not increase the size of the editor's content.
+	"editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": false,
+
+	// Controls whether clicks scroll by page or jump to click position.
+	"editor.scrollbar.scrollByPage": false,
+
+	// Controls the visibility of the vertical scrollbar.
+	//  - auto: The vertical scrollbar will be visible only when necessary.
+	//  - visible: The vertical scrollbar will always be visible.
+	//  - hidden: The vertical scrollbar will always be hidden.
+	"editor.scrollbar.vertical": "auto",
+
+	// The width of the vertical scrollbar.
+	"editor.scrollbar.verticalScrollbarSize": 14,
+
+	// Controls the number of extra characters beyond which the editor will scroll horizontally.
+	"editor.scrollBeyondLastColumn": 4,
+
+	// Controls whether the editor will scroll beyond the last line.
+	"editor.scrollBeyondLastLine": true,
+
+	// Controls whether the editor will scroll when the middle button is pressed.
+	"editor.scrollOnMiddleClick": false,
+
+	// Scroll only along the predominant axis when scrolling both vertically and horizontally at the same time. Prevents horizontal drift when scrolling vertically on a trackpad.
+	"editor.scrollPredominantAxis": true,
+
+	// Controls whether the editor should highlight matches similar to the selection.
+	"editor.selectionHighlight": true,
+
+	// Controls how many characters can be in the selection before similiar matches are not highlighted. Set to zero for unlimited.
+	"editor.selectionHighlightMaxLength": 200,
+
+	// Controls whether the editor should highlight selection matches that span multiple lines.
+	"editor.selectionHighlightMultiline": false,
+
+	// Controls whether the semanticHighlighting is shown for the languages that support it.
+	//  - true: Semantic highlighting enabled for all color themes.
+	//  - false: Semantic highlighting disabled for all color themes.
+	//  - configuredByTheme: Semantic highlighting is configured by the current color theme's `semanticHighlighting` setting.
+	"editor.semanticHighlighting.enabled": "configuredByTheme",
+
+	// Controls strikethrough deprecated variables.
+	"editor.showDeprecated": true,
+
+	// Controls when the folding controls on the gutter are shown.
+	//  - always: Always show the folding controls.
+	//  - never: Never show the folding controls and reduce the gutter size.
+	//  - mouseover: Only show the folding controls when the mouse is over the gutter.
+	"editor.showFoldingControls": "mouseover",
+
+	// Controls fading out of unused code.
+	"editor.showUnused": true,
+
+	// Whether leading and trailing whitespace should always be selected.
+	"editor.smartSelect.selectLeadingAndTrailingWhitespace": true,
+
+	// Whether subwords (like 'foo' in 'fooBar' or 'foo_bar') should be selected.
+	"editor.smartSelect.selectSubwords": true,
+
+	// Controls whether the editor will scroll using an animation.
+	"editor.smoothScrolling": false,
+
+	// Controls if surround-with-snippets or file template snippets show as Code Actions.
+	"editor.snippets.codeActions.enabled": true,
+
+	// Controls whether snippets are shown with other suggestions and how they are sorted.
+	//  - top: Show snippet suggestions on top of other suggestions.
+	//  - bottom: Show snippet suggestions below other suggestions.
+	//  - inline: Show snippets suggestions with other suggestions.
+	//  - none: Do not show snippet suggestions.
+	"editor.snippetSuggestions": "inline",
+
+	// Keep peek editors open even when double-clicking their content or when hitting `Escape`.
+	"editor.stablePeek": false,
+
+	// Defines the model to use for determining which lines to stick. If the outline model does not exist, it will fall back on the folding provider model which falls back on the indentation model. This order is respected in all three cases.
+	"editor.stickyScroll.defaultModel": "outlineModel",
+
+	// Shows the nested current scopes during the scroll at the top of the editor.
+	"editor.stickyScroll.enabled": true,
+
+	// Defines the maximum number of sticky lines to show.
+	"editor.stickyScroll.maxLineCount": 5,
+
+	// Enable scrolling of Sticky Scroll with the editor's horizontal scrollbar.
+	"editor.stickyScroll.scrollWithEditor": true,
+
+	// Emulate selection behavior of tab characters when using spaces for indentation. Selection will stick to tab stops.
+	"editor.stickyTabStops": false,
+
+	// This setting is deprecated, please use separate settings like 'editor.suggest.showKeywords' or 'editor.suggest.showSnippets' instead.
+	// 
+	"editor.suggest.filteredTypes": {},
+
+	// Controls whether filtering and sorting suggestions accounts for small typos.
+	"editor.suggest.filterGraceful": true,
+
+	// Controls whether words are overwritten when accepting completions. Note that this depends on extensions opting into this feature.
+	//  - insert: Insert suggestion without overwriting text right of the cursor.
+	//  - replace: Insert suggestion and overwrite text right of the cursor.
+	"editor.suggest.insertMode": "insert",
+
+	// Controls whether sorting favors words that appear close to the cursor.
+	"editor.suggest.localityBonus": false,
+
+	// When enabled IntelliSense filtering requires that the first character matches on a word start. For example, `c` on `Console` or `WebContext` but _not_ on `description`. When disabled IntelliSense will show more results but still sorts them by match quality.
+	"editor.suggest.matchOnWordStartOnly": true,
+
+	// This setting is deprecated. The suggest widget can now be resized.
+	// 
+	"editor.suggest.maxVisibleSuggestions": 0,
+
+	// Controls whether to preview the suggestion outcome in the editor.
+	"editor.suggest.preview": false,
+
+	// Controls whether a suggestion is selected when the widget shows. Note that this only applies to automatically triggered suggestions (`editor.quickSuggestions` and `editor.suggestOnTriggerCharacters`) and that a suggestion is always selected when explicitly invoked, e.g via `Ctrl+Space`.
+	//  - always: Always select a suggestion when automatically triggering IntelliSense.
+	//  - never: Never select a suggestion when automatically triggering IntelliSense.
+	//  - whenTriggerCharacter: Select a suggestion only when triggering IntelliSense from a trigger character.
+	//  - whenQuickSuggestion: Select a suggestion only when triggering IntelliSense as you type.
+	"editor.suggest.selectionMode": "always",
+
+	// Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `editor.suggestSelection`).
+	"editor.suggest.shareSuggestSelections": false,
+
+	// When enabled IntelliSense shows `class`-suggestions.
+	"editor.suggest.showClasses": true,
+
+	// When enabled IntelliSense shows `color`-suggestions.
+	"editor.suggest.showColors": true,
+
+	// When enabled IntelliSense shows `constant`-suggestions.
+	"editor.suggest.showConstants": true,
+
+	// When enabled IntelliSense shows `constructor`-suggestions.
+	"editor.suggest.showConstructors": true,
+
+	// When enabled IntelliSense shows `customcolor`-suggestions.
+	"editor.suggest.showCustomcolors": true,
+
+	// When enabled IntelliSense shows `deprecated`-suggestions.
+	"editor.suggest.showDeprecated": true,
+
+	// When enabled IntelliSense shows `enumMember`-suggestions.
+	"editor.suggest.showEnumMembers": true,
+
+	// When enabled IntelliSense shows `enum`-suggestions.
+	"editor.suggest.showEnums": true,
+
+	// When enabled IntelliSense shows `event`-suggestions.
+	"editor.suggest.showEvents": true,
+
+	// When enabled IntelliSense shows `field`-suggestions.
+	"editor.suggest.showFields": true,
+
+	// When enabled IntelliSense shows `file`-suggestions.
+	"editor.suggest.showFiles": true,
+
+	// When enabled IntelliSense shows `folder`-suggestions.
+	"editor.suggest.showFolders": true,
+
+	// When enabled IntelliSense shows `function`-suggestions.
+	"editor.suggest.showFunctions": true,
+
+	// Controls whether to show or hide icons in suggestions.
+	"editor.suggest.showIcons": true,
+
+	// Controls whether suggest details show inline with the label or only in the details widget.
+	"editor.suggest.showInlineDetails": true,
+
+	// When enabled IntelliSense shows `interface`-suggestions.
+	"editor.suggest.showInterfaces": true,
+
+	// When enabled IntelliSense shows `issues`-suggestions.
+	"editor.suggest.showIssues": true,
+
+	// When enabled IntelliSense shows `keyword`-suggestions.
+	"editor.suggest.showKeywords": true,
+
+	// When enabled IntelliSense shows `method`-suggestions.
+	"editor.suggest.showMethods": true,
+
+	// When enabled IntelliSense shows `module`-suggestions.
+	"editor.suggest.showModules": true,
+
+	// When enabled IntelliSense shows `operator`-suggestions.
+	"editor.suggest.showOperators": true,
+
+	// When enabled IntelliSense shows `property`-suggestions.
+	"editor.suggest.showProperties": true,
+
+	// When enabled IntelliSense shows `reference`-suggestions.
+	"editor.suggest.showReferences": true,
+
+	// When enabled IntelliSense shows `snippet`-suggestions.
+	"editor.suggest.showSnippets": true,
+
+	// Controls the visibility of the status bar at the bottom of the suggest widget.
+	"editor.suggest.showStatusBar": false,
+
+	// When enabled IntelliSense shows `struct`-suggestions.
+	"editor.suggest.showStructs": true,
+
+	// When enabled IntelliSense shows `typeParameter`-suggestions.
+	"editor.suggest.showTypeParameters": true,
+
+	// When enabled IntelliSense shows `unit`-suggestions.
+	"editor.suggest.showUnits": true,
+
+	// When enabled IntelliSense shows `user`-suggestions.
+	"editor.suggest.showUsers": true,
+
+	// When enabled IntelliSense shows `value`-suggestions.
+	"editor.suggest.showValues": true,
+
+	// When enabled IntelliSense shows `variable`-suggestions.
+	"editor.suggest.showVariables": true,
+
+	// When enabled IntelliSense shows `text`-suggestions.
+	"editor.suggest.showWords": true,
+
+	// Controls whether an active snippet prevents quick suggestions.
+	"editor.suggest.snippetsPreventQuickSuggestions": false,
+
+	// Font size for the suggest widget. When set to `0`, the value of `editor.fontSize` is used.
+	"editor.suggestFontSize": 0,
+
+	// Line height for the suggest widget. When set to `0`, the value of `editor.lineHeight` is used. The minimum value is 8.
+	"editor.suggestLineHeight": 0,
+
+	// Controls whether suggestions should automatically show up when typing trigger characters.
+	"editor.suggestOnTriggerCharacters": true,
+
+	// Controls how suggestions are pre-selected when showing the suggest list.
+	//  - first: Always select the first suggestion.
+	//  - recentlyUsed: Select recent suggestions unless further typing selects one, e.g. `console.| -> console.log` because `log` has been completed recently.
+	//  - recentlyUsedByPrefix: Select suggestions based on previous prefixes that have completed those suggestions, e.g. `co -> console` and `con -> const`.
+	"editor.suggestSelection": "first",
+
+	// Enables tab completions.
+	//  - on: Tab complete will insert the best matching suggestion when pressing tab.
+	//  - off: Disable tab completions.
+	//  - onlySnippets: Tab complete snippets when their prefix match. Works best when 'quickSuggestions' aren't enabled.
+	"editor.tabCompletion": "off",
+
+	// Controls whether the editor receives tabs or defers them to the workbench for navigation.
+	"editor.tabFocusMode": false,
+
+	// The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+	"editor.tabSize": 4,
+
+	// Remove trailing auto inserted whitespace.
+	"editor.trimAutoWhitespace": true,
+
+	// Controls whether the editor will also delete the next line's indentation whitespace when deleting a newline.
+	"editor.trimWhitespaceOnDelete": false,
+
+	// Controls whether clicking on the empty content after a folded line will unfold the line.
+	"editor.unfoldOnClickAfterEndOfLine": false,
+
+	// Defines allowed characters that are not being highlighted.
+	"editor.unicodeHighlight.allowedCharacters": {},
+
+	// Unicode characters that are common in allowed locales are not being highlighted.
+	"editor.unicodeHighlight.allowedLocales": {
+		"_os": true,
+		"_vscode": true
+	},
+
+	// Controls whether characters are highlighted that can be confused with basic ASCII characters, except those that are common in the current user locale.
+	"editor.unicodeHighlight.ambiguousCharacters": true,
+
+	// Controls whether characters in comments should also be subject to Unicode highlighting.
+	"editor.unicodeHighlight.includeComments": "inUntrustedWorkspace",
+
+	// Controls whether characters in strings should also be subject to Unicode highlighting.
+	"editor.unicodeHighlight.includeStrings": true,
+
+	// Controls whether characters that just reserve space or have no width at all are highlighted.
+	"editor.unicodeHighlight.invisibleCharacters": true,
+
+	// Controls whether all non-basic ASCII characters are highlighted. Only characters between U+0020 and U+007E, tab, line-feed and carriage-return are considered basic ASCII.
+	"editor.unicodeHighlight.nonBasicASCII": "inUntrustedWorkspace",
+
+	// Remove unusual line terminators that might cause problems.
+	//  - auto: Unusual line terminators are automatically removed.
+	//  - off: Unusual line terminators are ignored.
+	//  - prompt: Unusual line terminators prompt to be removed.
+	"editor.unusualLineTerminators": "prompt",
+
+	// Spaces and tabs are inserted and deleted in alignment with tab stops.
+	"editor.useTabStops": true,
+
+	// Controls whether completions should be computed based on words in the document and from which documents they are computed.
+	//  - off: Turn off Word Based Suggestions.
+	//  - offWithInlineSuggestions: Turn off Word Based Suggestions when Inline Suggestions are present.
+	//  - currentDocument: Only suggest words from the active document.
+	//  - matchingDocuments: Suggest words from all open documents of the same language.
+	//  - allDocuments: Suggest words from all open documents.
+	"editor.wordBasedSuggestions": "offWithInlineSuggestions",
+
+	// Controls the word break rules used for Chinese/Japanese/Korean (CJK) text.
+	//  - normal: Use the default line break rule.
+	//  - keepAll: Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for normal.
+	"editor.wordBreak": "normal",
+
+	// Locales to be used for word segmentation when doing word related navigations or operations. Specify the BCP 47 language tag of the word you wish to recognize (e.g., ja, zh-CN, zh-Hant-TW, etc.).
+	"editor.wordSegmenterLocales": [],
+
+	// Characters that will be used as word separators when doing word related navigations or operations.
+	"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+
+	// Controls how lines should wrap.
+	//  - off: Lines will never wrap.
+	//  - on: Lines will wrap at the viewport width.
+	//  - wordWrapColumn: Lines will wrap at `editor.wordWrapColumn`.
+	//  - bounded: Lines will wrap at the minimum of viewport and `editor.wordWrapColumn`.
+	"editor.wordWrap": "off",
+
+	// Controls the wrapping column of the editor when `editor.wordWrap` is `wordWrapColumn` or `bounded`.
+	"editor.wordWrapColumn": 80,
+
+	// Controls whether literal `\n` shall trigger a wordWrap when `editor.wordWrap` is enabled.
+	// 
+	// For example:
+	// ```c
+	// char* str="hello\nworld"
+	// ```
+	// will be displayed as
+	// ```c
+	// char* str="hello\n
+	//            world"
+	// ```
+	"editor.wrapOnEscapedLineFeeds": false,
+
+	// Controls the indentation of wrapped lines.
+	//  - none: No indentation. Wrapped lines begin at column 1.
+	//  - same: Wrapped lines get the same indentation as the parent.
+	//  - indent: Wrapped lines get +1 indentation toward the parent.
+	//  - deepIndent: Wrapped lines get +2 indentation toward the parent.
+	"editor.wrappingIndent": "same",
+
+	// Controls the algorithm that computes wrapping points. Note that when in accessibility mode, advanced will be used for the best experience.
+	//  - simple: Assumes that all characters are of the same width. This is a fast algorithm that works correctly for monospace fonts and certain scripts (like Latin characters) where glyphs are of equal width.
+	//  - advanced: Delegates wrapping points computation to the browser. This is a slow algorithm, that might cause freezes for large files, but it works correctly in all cases.
+	"editor.wrappingStrategy": "simple",
+		// Enable/disable the ability to preview changes before renaming
+	"editor.rename.enablePreview": true,
+
+	// Overrides editor semantic token color and styles from the currently selected color theme.
+	"editor.semanticTokenColorCustomizations": {},
+
+	// Overrides editor syntax colors and font style from the currently selected color theme.
+	"editor.tokenColorCustomizations": {},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+	// Breadcrumb Navigation
+	"breadcrumbs.enabled": true,
+	"breadcrumbs.filePath": "on",
+
+	// Render breadcrumb items with icons.
+	"breadcrumbs.icons": true,
+
+	// When enabled breadcrumbs show `array`-symbols.
+	"breadcrumbs.showArrays": true,
+
+	// When enabled breadcrumbs show `boolean`-symbols.
+	"breadcrumbs.showBooleans": true,
+
+	// When enabled breadcrumbs show `class`-symbols.
+	"breadcrumbs.showClasses": true,
+
+	// When enabled breadcrumbs show `constant`-symbols.
+	"breadcrumbs.showConstants": true,
+
+	// When enabled breadcrumbs show `constructor`-symbols.
+	"breadcrumbs.showConstructors": true,
+
+	// When enabled breadcrumbs show `enumMember`-symbols.
+	"breadcrumbs.showEnumMembers": true,
+
+	// When enabled breadcrumbs show `enum`-symbols.
+	"breadcrumbs.showEnums": true,
+
+	// When enabled breadcrumbs show `event`-symbols.
+	"breadcrumbs.showEvents": true,
+
+	// When enabled breadcrumbs show `field`-symbols.
+	"breadcrumbs.showFields": true,
+
+	// When enabled breadcrumbs show `file`-symbols.
+	"breadcrumbs.showFiles": true,
+
+	// When enabled breadcrumbs show `function`-symbols.
+	"breadcrumbs.showFunctions": true,
+
+	// When enabled breadcrumbs show `interface`-symbols.
+	"breadcrumbs.showInterfaces": true,
+
+	// When enabled breadcrumbs show `key`-symbols.
+	"breadcrumbs.showKeys": true,
+
+	// When enabled breadcrumbs show `method`-symbols.
+	"breadcrumbs.showMethods": true,
+
+	// When enabled breadcrumbs show `module`-symbols.
+	"breadcrumbs.showModules": true,
+
+	// When enabled breadcrumbs show `namespace`-symbols.
+	"breadcrumbs.showNamespaces": true,
+
+	// When enabled breadcrumbs show `null`-symbols.
+	"breadcrumbs.showNull": true,
+
+	// When enabled breadcrumbs show `number`-symbols.
+	"breadcrumbs.showNumbers": true,
+
+	// When enabled breadcrumbs show `object`-symbols.
+	"breadcrumbs.showObjects": true,
+
+	// When enabled breadcrumbs show `operator`-symbols.
+	"breadcrumbs.showOperators": true,
+
+	// When enabled breadcrumbs show `package`-symbols.
+	"breadcrumbs.showPackages": true,
+
+	// When enabled breadcrumbs show `property`-symbols.
+	"breadcrumbs.showProperties": true,
+
+	// When enabled breadcrumbs show `string`-symbols.
+	"breadcrumbs.showStrings": true,
+
+	// When enabled breadcrumbs show `struct`-symbols.
+	"breadcrumbs.showStructs": true,
+
+	// When enabled breadcrumbs show `typeParameter`-symbols.
+	"breadcrumbs.showTypeParameters": true,
+
+	// When enabled breadcrumbs show `variable`-symbols.
+	"breadcrumbs.showVariables": true,
+
+	// Controls whether and how symbols are shown in the breadcrumbs view.
+	//  - on: Show all symbols in the breadcrumbs view.
+	//  - off: Do not show symbols in the breadcrumbs view.
+	//  - last: Only show the current symbol in the breadcrumbs view.
+	"breadcrumbs.symbolPath": "on",
+
+	// The separator used when copying the breadcrumb symbol path.
+	"breadcrumbs.symbolPathSeparator": ".",
+
+	// Controls how symbols are sorted in the breadcrumbs outline view.
+	//  - position: Show symbol outline in file position order.
+	//  - name: Show symbol outline in alphabetical order.
+	//  - type: Show symbol outline in symbol type order.
+	"breadcrumbs.symbolSortOrder": "position",
+
+
+
+
+	"files.associations": {
+		"*.embeddedhtml": "html",
+		".env*": "dotenv"
+	},
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": "keyword.other.dotenv",
+				"settings": {
+					"foreground": "#FF000000"
+				}
+			}
+		]
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//============extension=================
+	//======background extension========
+
+
+	// The background image alignment.
+	"background.backgroundAlignment": [
+		"Center Center",
+		"Center Center",
+		"Center Center",
+		"Center Center"
+	],
+
+	// If `background.backgroundAlignment` is set to `Manual`, this is the literal value for the `background-position` css property.
+	"background.backgroundAlignmentValue": [
+		"50%",
+		"50%",
+		"50%",
+		"50%"
+	],
+
+	// The background image blur amount in css units.
+	"background.backgroundBlur": [
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+
+	// How long in seconds before the background should automatically change.
+	// 
+	// Set to `0` to always use the same image.
+	"background.backgroundChangeTime": [
+		0,
+		0,
+		0,
+		0
+	],
+
+	// The background opacity, make sure this number is not to high, otherwise you may not be able to see the UI and revert this change.
+	// 
+	// `1` is fully visible and `0` is invisible. If `background.useInvertedOpacity` is true, this logic is inverted.
+	"background.backgroundOpacity": [
+		0.1,
+		0.1,
+		0.1,
+		0.1
+	],
+
+	// The background image repeat.
+	//  - No Repeat: Do not repeat
+	//  - Repeat: Repeat X/Y
+	//  - Repeat X: Repeat X
+	//  - Repeat Y: Repeat Y
+	//  - Repeat Space: Repeat with even spacing to fill the screen
+	//  - Repeat Round: Repeat and stretch images to fill the screen
+	"background.backgroundRepeat": [
+		"No Repeat",
+		"No Repeat",
+		"No Repeat",
+		"No Repeat"
+	],
+
+	// The background image size.
+	//  - Auto: Original image size
+	//  - Contain: Fit image to the screen
+	//  - Cover: Stretch image to fill the screen
+	//  - Manual: Manual size
+	"background.backgroundSize": [
+		"Cover",
+		"Cover",
+		"Cover",
+		"Cover"
+	],
+
+	// If `background.windowBackgroundSize` is set to `Manual`, this is the literal value for the `background-size` css property.
+	"background.backgroundSizeValue": [
+		"100%",
+		"100%",
+		"100%",
+		"100%"
+	],
+
+	// Apply raw CSS to VSCode.
+	"background.CSS": "",
+
+	// The list of files, globs, or URLs to pull background images from.
+	// 
+	// * Use only `/` for directories, `\` is reserved for escape characters.
+	// 
+	// * Image URLs must be served over HTTPS.
+	"background.editorBackgrounds": [
+		"c:/Visuals/Visual Studio Code/9921de42ede13832ff5b845c71db8b44.gif"
+	],
+
+	// The list of files, globs, or URLs to pull background images from.
+	// 
+	// * Use only `/` for directories, `\` is reserved for escape characters.
+	// 
+	// * Image URLs must be served over HTTPS.
+	"background.panelBackgrounds": [],
+
+	// Show text, code, browser, and iframes on top of the background.
+	"background.renderTextAboveBackground": false,
+
+	// Where to save and load background settings.
+	// 
+	// This does not automatically update the background on workspace change, you need to also turn on `background.autoInstall`.
+	"background.settingScope": "Global",
+
+	// The list of files, globs, or URLs to pull background images from.
+	// 
+	// * Use only `/` for directories, `\` is reserved for escape characters.
+	// 
+	// * Image URLs must be served over HTTPS.
+	"background.sidebarBackgrounds": [],
+
+	// Use smooth image rendering rather than pixelated rendering when resizing images.
+	"background.smoothImageRendering": false,
+
+	// Use an inverted opacity, so 0 is fully visible and 1 is invisible.
+	"background.useInvertedOpacity": false,
+
+	// The list of files, globs, or URLs to pull background images from.
+	// 
+	// * Use only `/` for directories, `\` is reserved for escape characters.
+	// 
+	// * Image URLs must be served over HTTPS.
+	"background.windowBackgrounds": [],
+
+
+}
