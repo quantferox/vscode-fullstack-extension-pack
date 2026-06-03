@@ -15,75 +15,33 @@
 	//<================>WORKBENCH<================>
 	"workbench.activityBar.compact": true,
 	"workbench.activityBar.location": "top",
+	"workbench.colorTheme": "Bearded Theme Black & Gold",
 	"workbench.commandPalette.showAskInChat": false,
 	"workbench.editor.editorActionsLocation": "titleBar",
 	"workbench.editor.focusRecentEditorAfterClose": false,
+	"workbench.editor.highlightModifiedTabs": true,
+	"workbench.editor.tabSizing": "fit",
 	"workbench.editor.useModal": "off",
 	"workbench.enableExperiments": false,
-
-	
-	"workbench.layoutControl.enabled": true,
-	"workbench.layoutControl.type": "both",
-	"workbench.list.defaultFindMode": "highlight", //*
-	"workbench.list.openMode": "singleClick", //*
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.layoutControl.enabled": false,
 	"workbench.list.smoothScrolling": true,
-	"workbench.localHistory.maxFileEntries": 100, //*
-	"workbench.localHistory.maxFileSize": 256, //**
 	"workbench.navigationControl.enabled": false,
 	"workbench.panel.showLabels": false,
+	"workbench.productIconTheme": "Default",
 	"workbench.remoteIndicator.showExtensionRecommendations": false,
-	"workbench.sash.hoverDelay": 300,
-	"workbench.sash.size": 4,
+	"workbench.sash.hoverDelay": 200,
+	"workbench.sash.size": 2,
 	"workbench.secondarySideBar.showLabels": false,
-	"workbench.shadows": true,
-	"workbench.sideBar.location": "left",
-	"workbench.statusBar.visible": true,
+	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
 	"workbench.tree.enableStickyScroll": false,
-	"workbench.tree.indent": 8,
 	"workbench.tree.renderIndentGuides": "always",
-	"workbench.tree.stickyScrollMaxItemCount": 8,
 	"workbench.view.alwaysShowHeaderActions": true,
 	"workbench.welcomePage.experimentalOnboarding": false,
 	"workbench.welcomePage.walkthroughs.openOnInstall": false,
-	"workbench.colorTheme": "Bearded Theme Black & Gold",
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.productIconTheme": "Default",
-"workbench.startupEditor": "none",
-
-
-	/*"workbench.startupEditor": "none",
-
-
-	"workbench.editor.editorActionsLocation": "hidden",
-	"workbench.editor.empty.hint": "hidden",
-	"workbench.panel.showLabels": false,
-	"workbench.layoutControl.enabled": false,
-	"workbench.tree.enableStickyScroll": false,
-	"workbench.editor.highlightModifiedTabs": true,
-	"workbench.editor.limit.perEditorGroup": true,
-	"workbench.editor.limit.enabled": true,
-	"workbench.editor.limit.value": 5,
-	"workbench.editor.tabSizing": "shrink",*/
-	
 	//<================>EDITOR<================>
-	//<================>TERMINAL<================>
-	//<================>LANGUAGES<================>
-	//<================>EXTENSIONS<================>
-
-
-
-
-	/*==>>workbench<<==*/
-	/*==>>workbench<<==*/
-
-
-
-
-
-
-	/*==>>workbench<<==*/
-	"editor.acceptSuggestionOnEnter": "on",
+	
 	"editor.autoClosingBrackets": "languageDefined",
 	"editor.autoClosingComments": "languageDefined",
 	"editor.autoClosingDelete": "auto",
@@ -804,10 +762,48 @@
 		"textMateRules": []
 	},
 
-		"files.associations": {
+	"files.associations": {
 			"*.embeddedhtml": "html",
 			".env*": "dotenv"
-		},
+	},
+	//<================>TERMINAL<================>
+	//<================>LANGUAGES<================>
+	//<========>HTML<========>
+	//<========>CSS<========>
+	//<========>JS/TS<========>
+	//<========>PYTHON<========>
+	//<================>EXTENSIONS<================>
+	//<========>PRETTIER<========>
+	//<========>IMPORT COST<========>
+	//<========>EDITOR CONFIG<========>
+	//<========>BACKGROUND<========>
+	"background.backgroundBlur": [
+		"0",
+		"2px",
+		"0",
+		"0"
+	],
+	"background.backgroundOpacity": [
+		0.1,
+		0.16,
+		0.1,
+		0.1
+	],
+	"background.editorBackgrounds": [
+		"C:/Visuals/VisualStudioCode/9921de42ede13832ff5b845c71db8b44.gif"
+	],
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 
@@ -849,25 +845,17 @@
 	/*==>>workbench<<==*/
 
 	//============extension=================
-	//======background extension========
-	"background.backgroundBlur": [
-		"0",
-		"0.32px",
-		"0",
-		"0"
-	],
-	"background.backgroundOpacity": [
-		0.1,
-		0.16,
-		0.1,
-		0.1
-	],
-	"background.editorBackgrounds": [
-		"C:/Visuals/VisualStudioCode/9921de42ede13832ff5b845c71db8b44.gif"
-	],
-	"background.sidebarBackgrounds": [],
-	"background.windowBackgrounds": [],
-	//======background extension========
+	
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1377,6 +1365,29 @@
 	//  - on: Enable GPU acceleration within the terminal.
 	//  - off: Disable GPU acceleration within the terminal. The terminal will render much slower when GPU acceleration is off but it should reliably work on all systems.
 	"terminal.integrated.gpuAcceleration": "auto",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	// Whether to hide the terminal view when the last terminal is closed. This will only happen when the terminal is the only visible view in the view container.
 	"terminal.integrated.hideOnLastClosed": true,
@@ -2588,340 +2599,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	// Run a series of Code Actions for a notebook on save. Code Actions must be specified and the editor must not be shutting down. When `files.autoSave` is set to `afterDelay`, Code Actions will only be run when the file is saved explicitly. Example: `"notebook.source.organizeImports": "explicit"`
-	"notebook.codeActionsOnSave": {},
-	// The limit of notebook output size in kilobytes (KB) where notebook files will no longer be backed up for hot reload. Use 0 for unlimited.
-	"notebook.backup.sizeLimit": 10000,
-
-	// When enabled, notebook breadcrumbs contain code cells.
-	"notebook.breadcrumbs.showCodeCells": true,
-
-	// Controls the verbosity of the cell execution time in the cell status bar.
-	//  - default: The cell execution duration is visible, with advanced information in the hover tooltip.
-	//  - verbose: The cell last execution timestamp and duration are visible, with advanced information in the hover tooltip.
-	"notebook.cellExecutionTimeVerbosity": "default",
-
-	// Show available diagnostics for cell failures.
-	"notebook.cellFailureDiagnostics": true,
-
-	// Controls where the focus indicator is rendered, either along the cell borders or on the left gutter.
-	"notebook.cellFocusIndicator": "gutter",
-
-	// Where the cell toolbar should be shown, or whether it should be hidden.
-	"notebook.cellToolbarLocation": {
-		"default": "right"
-	},
-
-	// Whether the cell toolbar should appear on hover or click.
-	"notebook.cellToolbarVisibility": "click",
-
-	// Control whether the notebook editor should be rendered in a compact form. For example, when turned on, it will decrease the left margin width.
-	"notebook.compactView": true,
-
-	// Control whether a confirmation prompt is required to delete a running cell.
-	"notebook.confirmDeleteRunningCell": true,
-
-	// Control whether outputs action should be rendered in the output toolbar.
-	"notebook.consolidatedOutputButton": true,
-
-	// Control whether extra actions are shown in a dropdown next to the run button.
-	"notebook.consolidatedRunButton": false,
-
-	// Defines a default notebook formatter which takes precedence over all other formatter settings. Must be the identifier of an extension contributing a formatter.
-	//  - null: None
-	//  - ms-python.black-formatter: Formatting support for Python files using the Black formatter.
-	//  - vscode.json-language-features: Provides rich language support for JSON files.
-	//  - esbenp.prettier-vscode: Code formatter using prettier
-	//  - ms-vscode.cmake-tools: Extended CMake support in Visual Studio Code
-	//  - DEVSENSE.composer-php-vscode: All-in-One composer integration, quick actions, commands, automatic installation, tasks, code lenses, diagnostics, and composer.json IntelliSense.
-	//  - GitHub.copilot-chat: AI chat features powered by Copilot
-	//  - ms-vscode.cpptools: C/C++ IntelliSense, debugging, and code browsing.
-	//  - ms-dotnettools.csdevkit: Official C# extension from Microsoft
-	//  - ms-dotnettools.csharp: Base language support for C#
-	//  - vscode.css-language-features: Provides rich language support for CSS, LESS and SCSS files.
-	//  - Dart-Code.dart-code: Dart language support and debugger for Visual Studio Code.
-	//  - dotenv.dotenv-vscode: Official Dotenv. Syntax highlighting, auto-cloaking, auto-completion, in-code secret peeking, and optionally dotenv-vault.
-	//  - Dart-Code.flutter: Flutter support and debugger for Visual Studio Code.
-	//  - golang.go: Rich Go language support for Visual Studio Code
-	//  - vscode.html-language-features: Provides rich language support for HTML and Handlebar files
-	//  - DEVSENSE.intelli-php-vscode: AI-assisted development for PHP.
-	//  - redhat.java: Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...
-	//  - vscode.markdown-language-features: Provides rich language support for Markdown.
-	//  - vscode.markdown-math: Adds math support to Markdown in notebooks.
-	//  - Angular.ng-template: Editor services for Angular templates
-	//  - vscode.php-language-features: Provides rich language support for PHP files.
-	//  - DEVSENSE.phptools-vscode: All-in-One PHP support - IntelliSense, Debug, Formatter, Code Lenses, Code Fixes, Linting, Refactoring, PHPUnit Tests, Web Server, and more.
-	//  - ms-vscode.powershell: Develop PowerShell modules, commands and scripts in Visual Studio Code!
-	//  - Prisma.prisma: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
-	//  - DEVSENSE.profiler-php-vscode: Support for PHP (Xdebug) profiling files and inspecting them.
-	//  - ms-python.python: Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more.
-	//  - vscode.typescript-language-features: Provides rich language support for JavaScript and TypeScript.
-	//  - Vue.volar: Language Support for Vue
-	//  - ms-azuretools.vscode-containers: Makes it easy to create, manage, and debug containerized applications.
-	//  - dbaeumer.vscode-eslint: Integrates ESLint JavaScript into VS Code.
-	//  - vscjava.vscode-gradle: Manage Gradle Projects, run Gradle tasks and provide better Gradle file authoring experience in VS Code
-	//  - GraphQL.vscode-graphql: GraphQL LSP extension that adds autocompletion, validation, go to definition, hover, outline and more.
-	//  - vscjava.vscode-java-debug: A lightweight Java debugger for Visual Studio Code
-	//  - vscjava.vscode-java-pack: Popular extensions for Java development that provides Java IntelliSense, debugging, testing, Maven/Gradle support, project management and more
-	//  - vscjava.vscode-maven: Manage Maven projects, execute goals, generate project from archetype, improve user experience for Java developers.
-	//  - ms-python.vscode-pylance: A performant, feature-rich language server for Python in VS Code
-	//  - vmware.vscode-spring-boot: Provides validation and content assist for Spring Boot `application.properties`, `application.yml` properties files. As well as Boot-specific support for `.java` files.
-	//  - redhat.vscode-xml: XML Language Support by Red Hat
-	//  - redhat.vscode-yaml: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
-	//  - Katsute.code-background: The most advanced background image extension for VSCode
-	//  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
-	//  - ms-vscode.cpp-devtools: Enhanced development tools for C++ in VS Code
-	//  - vscode.debug-auto-launch: Helper for auto-attach feature when node-debug extensions are not active.
-	//  - vscode.debug-server-ready: Open URI in browser if server under debugging is ready.
-	//  - ms-python.debugpy: Python Debugger extension using debugpy.
-	//  - EditorConfig.EditorConfig: EditorConfig Support for Visual Studio Code
-	//  - vscode.emmet: Emmet support for VS Code
-	//  - vscode.extension-editing: Provides linting capabilities for authoring extensions.
-	//  - vscode.git: Git SCM Integration
-	//  - vscode.git-base: Git static contributions and pickers.
-	//  - vscode.github: GitHub features for VS Code
-	//  - vscode.github-authentication: GitHub Authentication Provider
-	//  - eamodio.gitlens: Supercharge Git within VS Code — Visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more
-	//  - vscode.grunt: Extension to add Grunt capabilities to VS Code.
-	//  - vscode.gulp: Extension to add Gulp capabilities to VSCode.
-	//  - vscode.ipynb: Provides basic support for opening and reading Jupyter's .ipynb notebook files
-	//  - vscode.jake: Extension to add Jake capabilities to VS Code.
-	//  - ms-vscode.js-debug: An extension for debugging Node.js programs and Chrome.
-	//  - ms-vscode.js-debug-companion: Companion extension to js-debug that provides capability for remote debugging
-	//  - PKief.material-icon-theme: Material Design Icons for Visual Studio Code
-	//  - vscode.media-preview: Provides VS Code's built-in previews for images, audio, and video
-	//  - vscode.merge-conflict: Highlighting and commands for inline merge conflicts.
-	//  - vscode.mermaid-markdown-features: Adds Mermaid diagram support to built-in chats, Markdown previews, and notebooks.
-	//  - vscode.microsoft-authentication: Microsoft authentication provider
-	//  - vscode.npm: Extension to add task support for npm scripts.
-	//  - vscode.references-view: Reference Search results as separate, stable view in the sidebar
-	//  - vscode.search-result: Provides syntax highlighting and language features for tabbed search results.
-	//  - vscode.simple-browser: A very basic built-in webview for displaying web content.
-	//  - vscode.terminal-suggest: Extension to add terminal completions for zsh, bash, and fish terminals.
-	//  - vscode.tunnel-forwarding: Allows forwarding local ports to be accessible over the internet.
-	//  - ms-dotnettools.vscode-dotnet-runtime: This extension installs and manages different versions of the .NET SDK and Runtime.
-	//  - wix.vscode-import-cost: Display import/require package size in the editor
-	//  - vscjava.vscode-java-dependency: Manage Java projects in Visual Studio Code
-	//  - vscjava.vscode-java-test: Run and debug JUnit or TestNG test cases.
-	//  - ms-vscode.vscode-js-profile-table: Text visualizer for profiles taken from the JavaScript debugger
-	//  - laravel.vscode-laravel: Official VS Code extension for Laravel
-	//  - ms-python.vscode-python-envs: Provides a unified python environment experience
-	//  - msjsdiag.vscode-react-native: Debugging and integrated commands for React Native
-	//  - vscjava.vscode-spring-boot-dashboard: Spring Boot Dashboard for VS Code
-	//  - vscjava.vscode-spring-initializr: A lightweight extension based on Spring Initializr to generate quick start Spring Boot Java projects.
-	//  - bradlc.vscode-tailwindcss: Intelligent Tailwind CSS tooling for VS Code
-	"notebook.defaultFormatter": null,
-
-	// Whether to use the enhanced text diff editor for notebook.
-	"notebook.diff.enablePreview": true,
-
-	// Enable the command to toggle the experimental notebook inline diff editor.
-	"notebook.diff.experimental.toggleInline": false,
-
-	// Hide Metadata Differences
-	"notebook.diff.ignoreMetadata": false,
-
-	// Hide Outputs Differences
-	"notebook.diff.ignoreOutputs": false,
-
-	// Whether to render the overview ruler in the diff editor for notebook.
-	"notebook.diff.overviewRuler": false,
-
-	// Priority list for output mime types
-	"notebook.displayOrder": [],
-
-	// Control whether the notebook editor should allow moving cells through drag and drop.
-	"notebook.dragAndDropEnabled": true,
-
-	// Settings for code editors used in notebooks. This can be used to customize most editor.* settings.
-	"notebook.editorOptionsCustomizations": {},
-
-	// Enable experimental generate action to create code cell with inline chat enabled.
-	"notebook.experimental.generate": true,
-
-	// Enables the incremental saving of notebooks between processes and across Remote connections. When enabled, only the changes to the notebook are sent to the extension host, improving performance for large notebooks and slow network connections.
-	"notebook.experimental.remoteSave": false,
-
-	// Customize the Find Widget behavior for searching within notebook cells. When both markup source and markup preview are enabled, the Find Widget will search either the source code or preview based on the current state of the cell.
-	"notebook.find.filters": {
-		"markupSource": true,
-		"markupPreview": true,
-		"codeSource": true,
-		"codeOutput": true
-	},
-
-	// Format a notebook cell upon execution. A formatter must be available.
-	"notebook.formatOnCellExecution": false,
-
-	// Format a notebook on save. A formatter must be available and the editor must not be shutting down. When `files.autoSave` is set to `afterDelay`, the file will only be formatted when saved explicitly.
-	"notebook.formatOnSave.enabled": false,
-
-	// Control whether to render a global toolbar inside the notebook editor.
-	"notebook.globalToolbar": true,
-
-	// Control whether the actions on the notebook toolbar should render label or not.
-	"notebook.globalToolbarShowLabel": "always",
-
-	// When enabled, the Go to Symbol Quick Pick will display full code symbols from the notebook, as well as Markdown headers.
-	"notebook.gotoSymbols.showAllSymbols": true,
-
-	// Control whether to show inline values within notebook code cells after cell execution. Values will remain until the cell is edited, re-executed, or explicitly cleared via the Clear All Outputs toolbar button or the `Notebook: Clear Inline Values` command.
-	//  - on: Always show inline values, with a regex fallback if no inline value provider is registered. Note: There may be a performance impact in larger cells if the fallback is used.
-	//  - auto: Show inline values only when an inline value provider is registered.
-	//  - off: Never show inline values.
-	"notebook.inlineValues": "off",
-
-	// When enabled, insert a final new line into the end of code cells when saving a notebook.
-	"notebook.insertFinalNewline": false,
-
-	// Control where the insert cell actions should appear.
-	//  - betweenCells: A toolbar that appears on hover between cells.
-	//  - notebookToolbar: The toolbar at the top of the notebook editor.
-	//  - both: Both toolbars.
-	//  - hidden: The insert actions don't appear anywhere.
-	"notebook.insertToolbarLocation": "both",
-
-	// Controls the display of line numbers in the cell editor.
-	"notebook.lineNumbers": "off",
-
-	// Controls the line height in pixels of markdown cells in notebooks. When set to `0`, `normal` will be used
-	"notebook.markdown.lineHeight": 0,
-
-	// Controls the font family of rendered markup in notebooks. When left blank, this will fall back to the default workbench font family.
-	"notebook.markup.fontFamily": "",
-
-	// Controls the font size in pixels of rendered markup in notebooks. When set to `0`, 120% of `editor.fontSize` is used.
-	"notebook.markup.fontSize": 0,
-
-	// Experimental. Enables a limited set of multi cursor controls across multiple cells in the notebook editor. Currently supported are core editor actions (typing/cut/copy/paste/composition) and a limited subset of editor commands.
-	"notebook.multiCursor.enabled": false,
-
-	// When enabled cursor can navigate to the next/previous cell when the current cursor in the cell editor is at the first/last line.
-	"notebook.navigation.allowNavigateToSurroundingCells": true,
-
-	// When enabled, notebook outline shows code cells.
-	"notebook.outline.showCodeCells": false,
-
-	// When enabled, notebook outline shows code cell symbols. Relies on `notebook.outline.showCodeCells` being enabled.
-	"notebook.outline.showCodeCellSymbols": true,
-
-	// When enabled, notebook outline will show only markdown cells containing a header.
-	"notebook.outline.showMarkdownHeadersOnly": true,
-
-	// The font family of the output text within notebook cells. When set to empty, the `editor.fontFamily` is used.
-	"notebook.output.fontFamily": "",
-
-	// Font size for the output text within notebook cells. When set to 0, `editor.fontSize` is used.
-	"notebook.output.fontSize": 0,
-
-	// Line height of the output text within notebook cells.
-	//  - When set to 0, editor line height is used.
-	//  - Values between 0 and 8 will be used as a multiplier with the font size.
-	//  - Values greater than or equal to 8 will be used as effective values.
-	"notebook.output.lineHeight": 0,
-
-	// Control whether to disable filepath links in the output of notebook cells.
-	"notebook.output.linkifyFilePaths": true,
-
-	// Control whether to render error output in a minimal style.
-	"notebook.output.minimalErrorRendering": false,
-
-	// Initially render notebook outputs in a scrollable region when longer than the limit.
-	"notebook.output.scrolling": false,
-
-	// Controls how many lines of text are displayed in a text output. If `notebook.output.scrolling` is enabled, this setting is used to determine the scroll height of the output.
-	"notebook.output.textLineLimit": 30,
-
-	// Controls whether the lines in output should wrap.
-	"notebook.output.wordWrap": false,
-
-	// How far to scroll when revealing the next cell upon running notebook.cell.executeAndSelectBelow.
-	//  - fullCell: Scroll to fully reveal the next cell.
-	//  - firstLine: Scroll to reveal the first line of the next cell.
-	//  - none: Do not scroll.
-	"notebook.scrolling.revealNextCellOnExecute": "fullCell",
-
-	// Whether the cell status bar should be shown.
-	//  - hidden: The cell status bar is always hidden.
-	//  - visible: The cell status bar is always visible.
-	//  - visibleAfterExecute: The cell status bar is hidden until the cell has executed. Then it becomes visible to show the execution status.
-	"notebook.showCellStatusBar": "visible",
-
-	// Controls when the Markdown header folding arrow is shown.
-	//  - always: The folding controls are always visible.
-	//  - never: Never show the folding controls and reduce the gutter size.
-	//  - mouseover: The folding controls are visible only on mouseover.
-	"notebook.showFoldingControls": "mouseover",
-
-	// Experimental. Control whether to render notebook Sticky Scroll headers in the notebook editor.
-	"notebook.stickyScroll.enabled": false,
-
-	// Control whether nested sticky lines appear to stack flat or indented.
-	//  - flat: Nested sticky lines appear flat.
-	//  - indented: Nested sticky lines appear indented.
-	"notebook.stickyScroll.mode": "indented",
-
-	// Whether to use separate undo/redo stack for each cell.
-	"notebook.undoRedoPerCell": true,
-
-	// Enable the experimental notebook variables view within the debug panel.
-	"notebook.variablesView": false,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	"dotenv.enableAutocloaking": false,
 	"accessibility.signals.terminalBell": {
 		"sound": "off"
 	},
+
 
 }
