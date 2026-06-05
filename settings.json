@@ -10,57 +10,7 @@
 	},
 	//<================>BREADCRUMBS<================>
 	"breadcrumbs.enabled": false,
-
-
-
-
-	//<================>WINDOWS<================>
-	"window.autoDetectHighContrast": false,
-	"window.confirmBeforeClose": "keyboardOnly",
-	"window.density.editorTabHeight": "compact",
-	"window.openFoldersInNewWindow": "on",
-	"window.openWithoutArgumentsInNewWindow": "off",
-	"window.systemColorTheme": "auto",
-	"window.zoomLevel": 0,
-	//<================>WORKBENCH<================>
-	"workbench.activityBar.compact": true,
-	"workbench.activityBar.location": "top",
-	"workbench.browser.openLocalhostLinks": false,
-	"workbench.colorTheme": "Bearded Theme Black & Gold",
-	"workbench.commandPalette.showAskInChat": false,
-	"workbench.editor.editorActionsLocation": "titleBar",
-	"workbench.editor.focusRecentEditorAfterClose": false,
-	"workbench.editor.highlightModifiedTabs": true,
-	"workbench.editor.tabSizing": "fit",
-	"workbench.editor.useModal": "off",
-	"workbench.enableExperiments": false,
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.layoutControl.enabled": false,
-	"workbench.list.smoothScrolling": true,
-	"workbench.navigationControl.enabled": false,
-	"workbench.panel.showLabels": false,
-	"workbench.productIconTheme": "Default",
-	"workbench.remoteIndicator.showExtensionRecommendations": false,
-	"workbench.sash.size": 2,
-	"workbench.secondarySideBar.showLabels": false,
-	"workbench.startupEditor": "none",
-	"workbench.tips.enabled": false,
-	"workbench.tree.enableStickyScroll": false,
-	"workbench.tree.renderIndentGuides": "always",
-	"workbench.view.alwaysShowHeaderActions": true,
-	"workbench.welcomePage.experimentalOnboarding": false,
-	"workbench.welcomePage.walkthroughs.openOnInstall": false,
-	//<================>FILES<================>
-	"files.associations": {
-		"*.embeddedhtml": "html",
-		".env*": "dotenv"
-	},
-	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true,
-	"files.trimTrailingWhitespace": true,
-	//<================>EXPLORER<================>
-	"explorer.compactFolders": false,
-	//<================>EDITOR<================>
+	//<================>CHAT<================>
 	"chat.agent.sandbox.advanced.runtime": {},
 	"chat.agent.sandbox.allowAutoApprove": true,
 	"chat.agent.sandbox.allowUnsandboxedCommands": true,
@@ -218,6 +168,87 @@
 	"chat.viewProgressBadge.enabled": false,
 	"chat.viewSessions.enabled": true,
 	"chat.viewSessions.orientation": "sideBySide",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//<================>WINDOWS<================>
+	"window.commandCenter": false,
+	"window.autoDetectHighContrast": false,
+	"window.confirmBeforeClose": "keyboardOnly",
+	"window.density.editorTabHeight": "compact",
+	"window.openFoldersInNewWindow": "on",
+	"window.openWithoutArgumentsInNewWindow": "off",
+	"window.systemColorTheme": "auto",
+	"window.zoomLevel": 0,
+	//<================>WORKBENCH<================>
+	"workbench.activityBar.compact": true,
+	"workbench.activityBar.location": "top",
+	"workbench.browser.openLocalhostLinks": false,
+	"workbench.browser.showInTitleBar": false,
+	"workbench.colorTheme": "Bearded Theme Black & Gold",
+	"workbench.commandPalette.showAskInChat": false,
+	"workbench.editor.editorActionsLocation": "hidden",
+	"workbench.editor.focusRecentEditorAfterClose": false,
+	"workbench.editor.highlightModifiedTabs": true,
+	"workbench.editor.tabSizing": "fit",
+	"workbench.editor.useModal": "off",
+	"workbench.enableExperiments": false,
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.layoutControl.enabled": false,
+	"workbench.list.smoothScrolling": true,
+	"workbench.navigationControl.enabled": false,
+	"workbench.panel.showLabels": false,
+	"workbench.productIconTheme": "Default",
+	"workbench.remoteIndicator.showExtensionRecommendations": false,
+	"workbench.sash.size": 2,
+	"workbench.secondarySideBar.showLabels": false,
+	"workbench.startupEditor": "none",
+	"workbench.tips.enabled": false,
+	"workbench.tree.enableStickyScroll": false,
+	"workbench.tree.renderIndentGuides": "always",
+	"workbench.view.alwaysShowHeaderActions": true,
+	"workbench.welcomePage.experimentalOnboarding": false,
+	"workbench.welcomePage.walkthroughs.openOnInstall": false,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//<================>FILES<================>
+	"files.associations": {
+		"*.embeddedhtml": "html",
+		".env*": "dotenv"
+	},
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	//<================>EXPLORER<================>
+	"explorer.compactFolders": false,
+
 	//<================>EDITOR<================>
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSmoothCaretAnimation": "on",
@@ -233,19 +264,11 @@
 	"editor.fontWeight": "normal",
 	"editor.formatOnSave": true,
 	"editor.glyphMargin": true,
+	"editor.inlayHints.enabled": "off",
 
 
 
 
-
-
-
-	"editor.inlayHints.enabled": "on",
-	"editor.inlayHints.fontFamily": "",
-	"editor.inlayHints.fontSize": 0,
-	"editor.inlayHints.maximumLength": 43,
-	"editor.inlayHints.padding": false,
-	"editor.inlineCompletionsAccessibilityVerbose": false,
 	"editor.inlineSuggest.edits.allowCodeShifting": "always",
 	"editor.inlineSuggest.edits.renderSideBySide": "auto",
 	"editor.inlineSuggest.edits.showCollapsed": false,
@@ -284,6 +307,17 @@
 	// Controls whether to trigger a command when the inline suggestion provider changes.
 	"editor.inlineSuggest.triggerCommandOnProviderChange": false,
 	// Insert spaces when pressing `Tab`. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+
+
+
+
+
+
+
+
+
+
+
 	"editor.insertSpaces": true,
 	// Defines the bracket symbols that increase or decrease the indentation.
 	"editor.language.brackets": null,
@@ -779,10 +813,10 @@
 	"terminal.integrated.confirmOnExit": "never",
 	"terminal.integrated.confirmOnKill": "editor",
 	"terminal.integrated.copyOnSelection": false,
-	"terminal.integrated.cursorBlinking": false,
-	"terminal.integrated.cursorStyle": "block",
-	"terminal.integrated.cursorStyleInactive": "outline",
-	"terminal.integrated.cursorWidth": 1,
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.cursorStyleInactive": "line",
+	"terminal.integrated.cursorWidth": 2,
 	"terminal.integrated.customGlyphs": true,
 	"terminal.integrated.cwd": "",
 	"terminal.integrated.defaultLocation": "view",
@@ -1687,7 +1721,7 @@
 	"python.autoComplete.extraPaths": [],
 	"python.condaPath": "",
 	"python.createEnvironment.contentButton": "hide",
-	"python.createEnvironment.trigger": "prompt",
+	"python.createEnvironment.trigger": "off",
 	"python.defaultInterpreterPath": "python",
 	"python.envFile": "${workspaceFolder}/.env",
 	"python.experiments.enabled": true,
@@ -1766,7 +1800,7 @@
 	"python.analysis.inlayHints.callArgumentNames": "off",
 	"python.analysis.inlayHints.functionReturnTypes": false,
 	"python.analysis.inlayHints.pytestParameters": false,
-	"python.analysis.inlayHints.variableTypes": false,
+	"python.analysis.inlayHints.variableTypes": true,
 	"python.analysis.languageServerMode": "default",
 	"python.analysis.logLevel": "Information",
 	"python.analysis.nodeArguments": [],
@@ -1800,444 +1834,28 @@
 	"python.analysis.useNearestConfiguration": false,
 	"python.analysis.userFileIndexingLimit": 2000,
 	"python.terminal.useEnvFile": false,
+
+
+
+	//  `"black-formatter.args" = ["--config", "<file>"]`
+	"black-formatter.args": [],
+	"black-formatter.cwd": "${workspaceFolder}",
+	"black-formatter.importStrategy": "useBundled",
+	"black-formatter.interpreter": [],
+	"black-formatter.path": [],
+	"black-formatter.serverTransport": "stdio",
+	"black-formatter.showNotifications": "off",
+
+
+
+
+
+
+
+
+
+
 	//<================>EXTENSIONS<================>
-	//<========>PRETTIER<========>
-	//  - bradlc.vscode-tailwindcss: Intelligent Tailwind CSS tooling for VS Code
-	//  - bradlc.vscode-tailwindcss: Intelligent Tailwind CSS tooling for VS Code
-	//  - bradlc.vscode-tailwindcss: Intelligent Tailwind CSS tooling for VS Code
-	"tailwindcss-intellisense.trace.server": "off",
-	"tailwindCSS.classAttributes": [],
-	"tailwindCSS.classFunctions": [],
-	"tailwindCSS.codeActions": true,
-	"tailwindCSS.codeLens": true,
-	"tailwindCSS.colorDecorators": true,
-	"tailwindCSS.emmetCompletions": false,
-	"tailwindCSS.experimental.classRegex": [],
-	"tailwindCSS.experimental.configFile": null,
-	"tailwindCSS.files.exclude": [],
-	"tailwindCSS.hovers": true,
-	"tailwindCSS.includeLanguages": {},
-	"tailwindCSS.inspectPort": null,
-	"tailwindCSS.lint.cssConflict": "warning",
-	// Unsupported use of the [`@apply` directive](https://tailwindcss.com/docs/functions-and-directives/#apply)
-	"tailwindCSS.lint.invalidApply": "error",
-	// Unknown or invalid path used with the [`theme` helper](https://tailwindcss.com/docs/functions-and-directives/#theme)
-	"tailwindCSS.lint.invalidConfigPath": "error",
-	// Unknown screen name used with the [`@screen` directive](https://tailwindcss.com/docs/functions-and-directives/#screen)
-	"tailwindCSS.lint.invalidScreen": "error",
-	// Unknown value used with the [`@tailwind` directive](https://tailwindcss.com/docs/functions-and-directives/#tailwind)
-	"tailwindCSS.lint.invalidTailwindDirective": "error",
-	// Unknown variant name used with the [`@variants` directive](https://tailwindcss.com/docs/functions-and-directives/#variants)
-	"tailwindCSS.lint.invalidVariant": "error",
-	// Class variants not in the recommended order (applies in [JIT mode](https://tailwindcss.com/docs/just-in-time-mode) only)
-	"tailwindCSS.lint.recommendedVariantOrder": "warning",
-	"tailwindCSS.lint.suggestCanonicalClasses": "warning",
-	"tailwindCSS.lint.usedBlocklistedClass": "warning",
-	// Root font size in pixels. Used to convert `rem` CSS values to their `px` equivalents. See `tailwindCSS.showPixelEquivalents`.
-	"tailwindCSS.rootFontSize": 16,
-	"tailwindCSS.showPixelEquivalents": true,
-	"tailwindCSS.suggestions": true,
-	// Enable linting. Rules can be configured individually using the `tailwindcss.lint.*` settings
-	"tailwindCSS.validate": true,
-	//<========>PRETTIER<========>
-	/*Строка  6365: 		"Git Bash": {
-	Строка  6366: 			"source": "Git Bash",
-	Строка  9180: 		"github/copilot-plugins",
-	Строка  9181: 		"github/awesome-copilot"
-	Строка  9369: 		"GitHub.copilot",
-	Строка  9370: 		"GitHub.copilot-chat",*/
-	"github.copilot.chat.additionalReadAccessPaths": [],
-	"github.copilot.chat.agent.autoFix": false,
-	"github.copilot.chat.agent.backgroundTodoAgent.enabled": false,
-	"github.copilot.chat.agent.currentEditorContext.enabled": true,
-	"github.copilot.chat.agent.largeToolResultsToDisk.enabled": true,
-	"github.copilot.chat.agent.largeToolResultsToDisk.thresholdBytes": 8192,
-	"github.copilot.chat.agent.modelDetails.enabled": true,
-	"github.copilot.chat.agent.omitFileAttachmentContents": false,
-	"github.copilot.chat.agent.temperature": 0,
-	"github.copilot.chat.agentDebugLog.fileLogging.enabled": false,
-	"github.copilot.chat.agentDebugLog.fileLogging.flushIntervalMs": 4000,
-	"github.copilot.chat.agentDebugLog.fileLogging.maxRetainedSessionLogs": 50,
-	"github.copilot.chat.agentDebugLog.fileLogging.maxSessionLogSizeMB": 100,
-	"github.copilot.chat.agentHistorySummarizationMode": "",
-	"github.copilot.chat.alternateGeminiModelFPrompt.enabled": false,
-	"github.copilot.chat.alternateGptPrompt.enabled": false,
-	"github.copilot.chat.anthropic.contextEditing.mode": "off",
-	"github.copilot.chat.anthropic.promptCaching.extendedTtl": false,
-	"github.copilot.chat.anthropic.promptCaching.extendedTtlMessages": false,
-	"github.copilot.chat.anthropic.tools.websearch.allowedDomains": [],
-	"github.copilot.chat.anthropic.tools.websearch.blockedDomains": [],
-	"github.copilot.chat.anthropic.tools.websearch.enabled": false,
-	"github.copilot.chat.anthropic.tools.websearch.maxUses": 5,
-	"github.copilot.chat.anthropic.tools.websearch.userLocation": null,
-	"github.copilot.chat.anthropic.useMessagesApi": true,
-	"github.copilot.chat.askAgent.additionalTools": [],
-	"github.copilot.chat.askAgent.model": "",
-	"github.copilot.chat.backgroundAgent.enabled": true,
-	"github.copilot.chat.claude47OpusPrompt.enabled": false,
-	"github.copilot.chat.claudeAgent.allowAutoPermissions": false,
-	"github.copilot.chat.claudeAgent.allowDangerouslySkipPermissions": false,
-	"github.copilot.chat.claudeAgent.enabled": true,
-	"github.copilot.chat.cli.aiGenerateBranchNames.enabled": true,
-	"github.copilot.chat.cli.autoCommit.enabled": true,
-	"github.copilot.chat.cli.autoModel.enabled": false,
-	"github.copilot.chat.cli.branchSupport.enabled": false,
-	"github.copilot.chat.cli.forkSessions.enabled": true,
-	"github.copilot.chat.cli.isolationOption.enabled": true,
-	"github.copilot.chat.cli.lazyLoadSessionItem.enabled": true,
-	"github.copilot.chat.cli.mcp.enabled": true,
-	"github.copilot.chat.cli.planCommand.enabled": true,
-	"github.copilot.chat.cli.planExitMode.enabled": true,
-	"github.copilot.chat.cli.remote.enabled": true,
-	"github.copilot.chat.cli.sessionController.enabled": false,
-	"github.copilot.chat.cli.sessionControllerForSessionsApp.enabled": false,
-	"github.copilot.chat.cli.showExternalSessions": true,
-	"github.copilot.chat.cli.terminalLinks.enabled": true,
-	"github.copilot.chat.cli.thinkingEffort.enabled": true,
-	"github.copilot.chat.cloudAgent.enabled": true,
-	"github.copilot.chat.cloudAgentBackend.version": "v1",
-	"github.copilot.chat.codeGeneration.instructions": [],
-	"github.copilot.chat.codeGeneration.useInstructionFiles": true,
-	"github.copilot.chat.codesearch.agent.enabled": true,
-	"github.copilot.chat.codesearch.enabled": false,
-	"github.copilot.chat.commitMessageGeneration.instructions": [],
-	"github.copilot.chat.completionsFetcher": "",
-	"github.copilot.chat.copilotDebugCommand.enabled": true,
-	"github.copilot.chat.customInstructionsInSystemMessage": true,
-	"github.copilot.chat.debug.promptOverrideFile": null,
-	"github.copilot.chat.debug.promptOverrideString": null,
-	"github.copilot.chat.debug.requestLogger.maxEntries": 100,
-	"github.copilot.chat.debugTerminalCommandPatterns": [],
-	"github.copilot.chat.editRecording.enabled": false,
-	"github.copilot.chat.edits.batchReplaceStringDescriptions": false,
-	"github.copilot.chat.edits.gemini3MultiReplaceString": false,
-	"github.copilot.chat.enableUserPreferences": false,
-	"github.copilot.chat.executionSubagent.enabled": false,
-	"github.copilot.chat.executionSubagent.model": "",
-	"github.copilot.chat.executionSubagent.toolCallLimit": 10,
-	"github.copilot.chat.executionSubagent.useAgenticProxy": false,
-	"github.copilot.chat.exploreAgent.enabled": true,
-	"github.copilot.chat.exploreAgent.model": "",
-	"github.copilot.chat.feedback.onChange": false,
-	"github.copilot.chat.getChangedFilesTool.enabled": false,
-	"github.copilot.chat.githubMcpServer.channel": "stable",
-	"github.copilot.chat.githubMcpServer.enabled": false,
-	"github.copilot.chat.githubMcpServer.lockdown": false,
-	"github.copilot.chat.githubMcpServer.readonly": false,
-	"github.copilot.chat.githubMcpServer.toolsets": [],
-	"github.copilot.chat.gpt55EconomicalSearchAndEdit.enabled": false,
-	"github.copilot.chat.gpt55GetChangedFilesTool.enabled": true,
-	"github.copilot.chat.gpt55LargePromptSections.enabled": false,
-	"github.copilot.chat.gpt55ReadFileTool.enabled": true,
-	"github.copilot.chat.gpt5AlternativePatch": false,
-	"github.copilot.chat.imageUpload.enabled": true,
-	"github.copilot.chat.implementAgent.model": "",
-	"github.copilot.chat.inlineChat.enableThinking": false,
-	"github.copilot.chat.inlineChat.reasoningEffort": "low",
-	"github.copilot.chat.inlineEdits.chatSessionContextProvider.enabled": false,
-	"github.copilot.chat.inlineEdits.diagnosticsContextProvider.enabled": false,
-	"github.copilot.chat.inlineEdits.nextCursorPrediction.currentFileMaxTokens": 3000,
-	"github.copilot.chat.inlineEdits.nextCursorPrediction.displayLine": true,
-	"github.copilot.chat.inlineEdits.renameSymbolSuggestions": true,
-	"github.copilot.chat.inlineEdits.triggerOnEditorChangeAfterSeconds": 10,
-	"github.copilot.chat.inlineEdits.xtabProvider.modelConfiguration": null,
-	"github.copilot.chat.installExtensionSkill.enabled": false,
-	"github.copilot.chat.instantApply.shortContextLimit": 8000,
-	"github.copilot.chat.instantApply.shortContextModelName": "gpt-4o-instant-apply-full-ft-v66-short",
-	"github.copilot.chat.languageContext.fix.typescript.enabled": false,
-	"github.copilot.chat.languageContext.inline.typescript.enabled": false,
-	"github.copilot.chat.languageContext.typescript.cacheTimeout": 500,
-	"github.copilot.chat.languageContext.typescript.enabled": true,
-	"github.copilot.chat.languageContext.typescript.includeDocumentation": false,
-	"github.copilot.chat.languageContext.typescript.items": "double",
-	"github.copilot.chat.localeOverride": "auto",
-	"github.copilot.chat.localIndex.enabled": false,
-	"github.copilot.chat.localWorkspaceRecording.enabled": false,
-	"github.copilot.chat.modelCapabilityOverrides": {},
-	"github.copilot.chat.nesFetcher": "",
-	"github.copilot.chat.newWorkspace.useContext7": false,
-	"github.copilot.chat.newWorkspaceCreation.enabled": true,
-	"github.copilot.chat.notebook.alternativeFormat": "xml",
-	"github.copilot.chat.notebook.alternativeNESFormat.enabled": false,
-	"github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": false,
-	"github.copilot.chat.notebook.followCellExecution.enabled": false,
-	"github.copilot.chat.notebook.summaryExperimentEnabled": false,
-	"github.copilot.chat.notebook.variableFilteringEnabled": false,
-	"github.copilot.chat.omitBaseAgentInstructions": false,
-	"github.copilot.chat.organizationCustomAgents.enabled": true,
-	"github.copilot.chat.organizationInstructions.enabled": true,
-	"github.copilot.chat.otel.captureContent": false,
-	"github.copilot.chat.otel.dbSpanExporter.enabled": false,
-	"github.copilot.chat.otel.enabled": false,
-	"github.copilot.chat.otel.exporterType": "otlp-http",
-	"github.copilot.chat.otel.maxAttributeSizeChars": 0,
-	"github.copilot.chat.otel.otlpEndpoint": "http://localhost:4318",
-	"github.copilot.chat.otel.outfile": "",
-	"github.copilot.chat.planAgent.additionalTools": [],
-	"github.copilot.chat.projectLabels.chat": false,
-	"github.copilot.chat.projectLabels.expanded": false,
-	"github.copilot.chat.projectLabels.inline": false,
-	"github.copilot.chat.promptFileContextProvider.enabled": true,
-	"github.copilot.chat.pullRequestDescriptionGeneration.instructions": [],
-	"github.copilot.chat.rateLimitAutoSwitchToAuto": false,
-	"github.copilot.chat.reasoningEffortOverride": null,
-	"github.copilot.chat.responsesApi.promptCacheKey.enabled": false,
-	"github.copilot.chat.responsesApiContextManagement.enabled": false,
-	"github.copilot.chat.responsesApiReasoningSummary": "detailed",
-	"github.copilot.chat.review.intent": false,
-	"github.copilot.chat.reviewAgent.enabled": true,
-	"github.copilot.chat.reviewSelection.enabled": true,
-	"github.copilot.chat.reviewSelection.instructions": [],
-	"github.copilot.chat.scopeSelection": false,
-	"github.copilot.chat.searchSubagent.enabled": false,
-	"github.copilot.chat.searchSubagent.model": "",
-	"github.copilot.chat.searchSubagent.thoroughnessEnabled": false,
-	"github.copilot.chat.searchSubagent.toolCallLimit": 4,
-	"github.copilot.chat.searchSubagent.useAgenticProxy": false,
-	"github.copilot.chat.setupTests.enabled": true,
-	"github.copilot.chat.skillTool.enabled": false,
-	"github.copilot.chat.summarizeAgentConversationHistory.enabled": true,
-	"github.copilot.chat.summarizeAgentConversationHistoryThreshold": 0,
-	"github.copilot.chat.switchAgent.enabled": false,
-	"github.copilot.chat.terminalChatLocation": "chatView",
-	"github.copilot.chat.testGeneration.instructions": [],
-	"github.copilot.chat.tools.defaultToolsGrouped": false,
-	"github.copilot.chat.tools.viewImage.enabled": true,
-	"github.copilot.chat.updated53CodexPrompt.enabled": true,
-	"github.copilot.chat.useProjectTemplates": true,
-	"github.copilot.chat.useResponsesApiTruncation": false,
-	"github.copilot.chat.virtualTools.threshold": 128,
-	"github.copilot.chat.workspace.codeSearchExternalIngest.enabled": true,
-	"github.copilot.chat.workspace.enableCodeSearch": true,
-	"github.copilot.chat.workspace.maxLocalIndexSize": 100000,
-	"github.copilot.chat.workspace.preferredEmbeddingsModel": "",
-	"github.copilot.chat.workspace.prototypeAdoCodeSearchEndpointOverride": "",
-	"github.copilot.editor.enableCodeActions": true,
-	"github.copilot.enable": {},
-	"github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": true,
-	"github.copilot.nextEditSuggestions.eagerness": "auto",
-	"github.copilot.nextEditSuggestions.enabled": true,
-	"github.copilot.nextEditSuggestions.extendedRange": false,
-	"github.copilot.nextEditSuggestions.fixes": true,
-	"github.copilot.nextEditSuggestions.preferredModel": "none",
-	"github.copilot.renameSuggestions.triggerAutomatically": true,
-	"github.copilot.selectedCompletionModel": "",
-	"git.addAICoAuthor": "off",
-	"git.allowForcePush": false,
-	"git.allowNoVerifyCommit": false,
-	"git.alwaysShowStagedChangesResourceGroup": false,
-	"git.alwaysSignOff": false,
-	"git.autofetch": false,
-	"git.autofetchPeriod": 180,
-	"git.autorefresh": true,
-	"git.autoRepositoryDetection": true,
-	"git.autoStash": false,
-	"git.blame.editorDecoration.disableHover": false,
-	"git.blame.editorDecoration.enabled": false,
-	"git.blame.editorDecoration.template": "${subject}, ${authorName} (${authorDateAgo})",
-	"git.blame.ignoreWhitespace": false,
-	"git.blame.statusBarItem.enabled": true,
-	"git.blame.statusBarItem.template": "${authorName} (${authorDateAgo})",
-	"git.branchPrefix": "",
-	"git.branchProtection": [],
-	"git.branchProtectionPrompt": "alwaysPrompt",
-	"git.branchRandomName.dictionary": [],
-	"git.branchRandomName.enable": false,
-	"git.branchSortOrder": "committerdate",
-	"git.branchValidationRegex": "",
-	"git.branchWhitespaceChar": "-",
-	"git.checkoutType": [],
-	"git.closeDiffOnOperation": false,
-	"git.commandsToLog": [],
-	"git.commitShortHashLength": 7,
-	"git.confirmCommittedDelete": true,
-	"git.confirmEmptyCommits": true,
-	"git.confirmForcePush": true,
-	"git.confirmNoVerifyCommit": true,
-	"git.confirmSync": true,
-	"git.countBadge": "all",
-	"git.decorations.enabled": true,
-	"git.defaultBranchName": "main",
-	"git.defaultCloneDirectory": null,
-	"git.detectSubmodules": true,
-	"git.detectSubmodulesLimit": 10,
-	"git.detectWorktrees": false,
-	"git.detectWorktreesLimit": 50,
-	"git.diagnosticsCommitHook.enabled": false,
-	"git.diagnosticsCommitHook.sources": {},
-	"git.discardUntrackedChangesToTrash": true,
-	"git.enableCommitSigning": false,
-	"git.enabled": true,
-	"git.enableSmartCommit": false,
-	"git.enableStatusBarSync": true,
-	"git.fetchOnPull": false,
-	"git.followTagsWhenSync": false,
-	"git.ignoredRepositories": [],
-	"git.ignoreLegacyWarning": false,
-	"git.ignoreLimitWarning": false,
-	"git.ignoreMissingGitWarning": false,
-	"git.ignoreRebaseWarning": false,
-	"git.ignoreSubmodules": false,
-	"git.ignoreWindowsGit27Warning": false,
-	"git.inputValidation": false,
-	"git.inputValidationLength": 72,
-	"git.inputValidationSubjectLength": 50,
-	"git.mergeEditor": false,
-	"git.openAfterClone": "prompt",
-	"git.openDiffOnClick": true,
-	"git.openRepositoryInParentFolders": "prompt",
-	"git.optimisticUpdate": true,
-	"git.path": null,
-	"git.postCommitCommand": "none",
-	"git.promptToSaveFilesBeforeCommit": "always",
-	"git.promptToSaveFilesBeforeStash": "always",
-	"git.pruneOnFetch": false,
-	"git.pullBeforeCheckout": false,
-	"git.pullTags": true,
-	"git.rebaseWhenSync": false,
-	"git.rememberPostCommitCommand": false,
-	"git.replaceTagsWhenPull": false,
-	"git.repositoryScanIgnoredFolders": [],
-	"git.repositoryScanMaxDepth": 1,
-	"git.requireGitUserConfig": true,
-	"git.scanRepositories": [],
-	"git.showActionButton": {},
-	"git.showCommitInput": true,
-	"git.showInlineOpenFileAction": true,
-	"git.showProgress": true,
-	"git.showPushSuccessNotification": false,
-	"git.showReferenceDetails": true,
-	"git.similarityThreshold": 50,
-	"git.smartCommitChanges": "all",
-	"git.statusLimit": 10000,
-	"git.suggestSmartCommit": true,
-	"git.supportCancellation": false,
-	"git.terminalAuthentication": true,
-	"git.terminalGitEditor": false,
-	"git.timeline.date": "committed",
-	"git.timeline.showAuthor": true,
-	"git.timeline.showUncommitted": false,
-	"git.untrackedChanges": "mixed",
-	"git.useCommitInputAsStashMessage": false,
-	"git.useEditorAsCommitInput": true,
-	"git.useForcePushIfIncludes": true,
-	"git.useForcePushWithLease": true,
-	"git.useIntegratedAskPass": true,
-	"git.verboseCommit": false,
-	"git.worktreeIncludeFiles": [],
-	"github.branchProtection": true,
-	"github.gitAuthentication": true,
-	"github.gitProtocol": "https",
-	"github.showAvatar": true,
-	"github-authentication.preferDeviceCodeFlow": false,
-	"github-authentication.useElectronFetch": true,
-	"github-enterprise.uri": "",
-
-
-	//<========>PRETTIER<========>
-	//  For example: `{"vue-html": "html", "javascript": "javascriptreact"}`
-	"vue.autoInsert.bracketSpacing": true,
-	"vue.autoInsert.dotValue": false,
-	"vue.codeActions.askNewComponentName": true,
-	"vue.editor.focusMode": false,
-	"vue.editor.reactivityVisualization": true,
-	"vue.editor.templateInterpolationDecorators": true,
-	"vue.format.script.enabled": true,
-	"vue.format.script.initialIndent": false,
-	"vue.format.style.enabled": true,
-	"vue.format.style.initialIndent": false,
-	"vue.format.template.enabled": true,
-	"vue.format.template.initialIndent": true,
-	"vue.format.wrapAttributes": "auto",
-	"vue.hover.rich": false,
-	"vue.inlayHints.destructuredProps": false,
-	"vue.inlayHints.inlineHandlerLeading": false,
-	"vue.inlayHints.missingProps": false,
-	"vue.inlayHints.optionsWrapper": false,
-	"vue.inlayHints.vBindShorthand": false,
-	"vue.server.includeLanguages": [],
-	"vue.server.path": "",
-	"vue.suggest.componentNameCasing": "preferPascalCase",
-	"vue.suggest.defineAssignment": true,
-	"vue.suggest.propNameCasing": "preferKebabCase",
-	"vue.trace.server": "off",
-	//<========>PRETTIER<========>
-	"angular.enable-strict-mode-prompt": true,
-	"angular.forceStrictTemplates": false,
-	"angular.log": "off",
-	"angular.server.useClientSideFileWatcher": true,
-	"angular.suggest.autoImports": true,
-	"angular.suggest.includeAutomaticOptionalChainCompletions": true,
-	"angular.suggest.includeCompletionsWithSnippetText": true,
-	"angular.suppressAngularDiagnosticCodes": "",
-	"angular.trace.server": "off",
-	//<========>PRETTIER<========>
-	//  - dbaeumer.vscode-eslint: Integrates ESLint JavaScript into VS Code.
-	//  - dbaeumer.vscode-eslint: Integrates ESLint JavaScript into VS Code.
-	//  - dbaeumer.vscode-eslint: Integrates ESLint JavaScript into VS Code.
-	// ESLint
-	// The setting is deprecated. Use editor.codeActionsOnSave instead with a source.fixAll.eslint member.
-	"eslint.codeAction.disableRuleComment": {},
-	"eslint.codeAction.showDocumentation": {},
-	"eslint.codeActionsOnSave.mode": "all",
-	// The ESLint options object to use on save (see https://eslint.org/docs/developer-guide/nodejs-api#eslint-class). `eslint.codeActionsOnSave.rules`, if specified, will take priority over any rule options here.
-	"eslint.codeActionsOnSave.options": {},
-	// The rules that should be executed when computing the code actions on save or formatting a file. Defaults to the rules configured via the ESLint configuration
-	"eslint.codeActionsOnSave.rules": null,
-	// Enables ESLint debug mode (same as `--debug` on the command line)
-	"eslint.debug": false,
-	// Controls whether eslint is enabled or not.
-	"eslint.enable": true,
-	"eslint.execArgv": null,
-	// Use ESLint version 8.57 or later and `eslint.useFlatConfig` instead.
-	// Enables support of experimental Flat Config (aka eslint.config.js). Requires ESLint version >= 8.21 < 8.57.0).
-	"eslint.experimental.useFlatConfig": false,
-	// Enables ESLint as a formatter.
-	"eslint.format.enable": false,
-	// If true, untitled files won't be validated by ESLint.
-	"eslint.ignoreUntitled": false,
-	// The command to run the task for linting the whole workspace. Defaults to the found eslint binary for the workspace, or 'eslint' if no binary could be found.
-	"eslint.lintTask.command": "eslint",
-	"eslint.lintTask.enable": false,
-	// Command line options applied when running the task for linting the whole workspace (see https://eslint.org/docs/user-guide/command-line-interface).
-	"eslint.lintTask.options": ".",
-	// Whether ESlint should migrate auto fix on save settings.
-	"eslint.migration.2_x": "on",
-	// The value of `NODE_ENV` to use when running eslint tasks.
-	"eslint.nodeEnv": null,
-	// A path added to `NODE_PATH` when resolving the eslint module.
-	"eslint.nodePath": null,
-	"eslint.notebooks.rules.customizations": [],
-	// Whether ESLint should issue a warning on ignored files.
-	"eslint.onIgnoredFiles": "off",
-	// The eslint options object to provide args normally passed to eslint when executed from a command line (see https://eslint.org/docs/developer-guide/nodejs-api#eslint-class).
-	"eslint.options": {},
-	"eslint.probe": [],
-	"eslint.problems.shortenToSingleLine": false,
-	// This option is deprecated. Use eslint.lintTask.enable instead.
-	"eslint.quiet": false,
-	// Override the severity of one or more rules reported by this extension, regardless of the project's ESLint config. Use globs to apply default severities for multiple rules.
-	"eslint.rules.customizations": [],
-	"eslint.run": "onType",
-	// The location of the node binary to run ESLint under.
-	"eslint.runtime": null,
-	"eslint.timeBudget.onFixes": {},
-	"eslint.timeBudget.onValidation": {},
-	// Traces the communication between VSCode and the eslint linter service.
-	"eslint.trace.server": "off",
-	// Since version 7 ESLint offers a new API call ESLint. Use it even if the old CLIEngine is available. From version 8 on forward on ESLint class is available.
-	"eslint.useESLintClass": false,
-	// Controls whether flat config should be used or not. This setting requires ESLint version 8.57 or later and is interpreted according to the [ESLint Flat Config rollout plan](https://eslint.org/blog/2023/10/flat-config-rollout-plans/). This means:
-	//  - *8.57.0 <= ESLint version < 9.x*: setting is honored and defaults to false
-	// - *9.0.0 <= ESLint version < 10.x*: settings is honored and defaults to true
-	// - *10.0.0 <= ESLint version*: setting is ignored. Flat configs are the default and can't be turned off.
-	"eslint.useFlatConfig": null,
-	// Whether ESLint should use real paths when resolving files. This is useful when working with symlinks or when the casing of file paths is inconsistent.
-	"eslint.useRealpaths": false,
-	// An array of language ids which should be validated by ESLint. If not installed ESLint will show an error.
-	"eslint.validate": null,
-	// Specifies how the working directories ESLint is using are computed. ESLint resolves configuration files (e.g. `eslintrc`, `.eslintignore`) relative to a working directory so it is important to configure this correctly.
-	"eslint.workingDirectories": [],
 	//<========>PRETTIER<========>
 	"prettier.arrowParens": "always",
 	"prettier.bracketSameLine": true,
@@ -2274,7 +1892,7 @@
 	"prettier.withNodeModules": false,
 	//<========>IMPORT COST<========>
 	"importCost.bundleSizeColoring": "compressed",
-	//<========>DOTENV CONFIG<========>
+	//<========>DOTENV<========>
 	"dotenv.cloakColor": "#C7910C",
 	"dotenv.cloakIcon": "▒",
 	"dotenv.enableAutocloaking": true,
@@ -2298,4 +1916,10 @@
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"redhat.telemetry.enabled": false,
+	"vs-kubernetes": {
+		"vscode-kubernetes.helm-path-windows": "C:\\Users\\QuantFerox\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+		"vscode-kubernetes.minikube-path-windows": "C:\\Users\\QuantFerox\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe"
+	},
+
 }
