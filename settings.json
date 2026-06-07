@@ -9,7 +9,7 @@
 		"sound": "off"
 	},
 	//<================>BREADCRUMBS<================>
-	"breadcrumbs.enabled": false,
+	"breadcrumbs.enabled": true,
 	//<================>CHAT<================>
 	"chat.agent.sandbox.advanced.runtime": {},
 	"chat.agent.sandbox.allowAutoApprove": true,
